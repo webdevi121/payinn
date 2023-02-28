@@ -13,7 +13,7 @@ const UsingDSG = () => (
     <p>
       To learn more, head over to our{" "}
       <a href="https://www.gatsbyjs.com/docs/reference/rendering-options/deferred-static-generation/">
-        documentation about Deferred Static Generation
+        documentation about Deferred Static Generation test
       </a>
       .
     </p>
