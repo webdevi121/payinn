@@ -1,40 +1,55 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sir",
+  "version": "1.0.0",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^5.7.0",
-    "gatsby-plugin-image": "^3.7.0",
-    "gatsby-plugin-manifest": "^5.7.0",
-    "gatsby-plugin-sharp": "^5.7.0",
-    "gatsby-source-filesystem": "^5.7.0",
-    "gatsby-transformer-sharp": "^5.7.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.4"
-  },
+  "description": "sir",
+  "author": "sarniel",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "gatsby": "^4.16.0",
+    "gatsby-plugin-exclude": "^1.0.2",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.16.1",
+    "gatsby-plugin-mailchimp": "^5.2.2",
+    "gatsby-plugin-manifest": "^4.16.0",
+    "gatsby-plugin-react-helmet": "^5.16.0",
+    "gatsby-plugin-sharp": "^4.16.1",
+    "gatsby-plugin-sitemap": "5.18.0",
+    "gatsby-source-filesystem": "^4.16.0",
+    "gatsby-source-wordpress": "^6.18.0",
+    "gatsby-transformer-json": "^4.16.0",
+    "gatsby-transformer-sharp": "^4.16.0",
+    "postcss": "^8.4.14",
+    "prop-types": "^15.8.1",
+    "rc-collapse": "^3.5.2",
+    "react": "^18.1.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "react-iframe": "^1.8.5",
+    "react-share": "^4.4.1",
+    "sass": "^1.52.3"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "autoprefixer": "^10.4.7",
+    "gatsby-plugin-postcss": "^5.16.0",
+    "gatsby-plugin-root-import": "^2.0.8",
+    "gatsby-plugin-sass": "^5.16.0",
+    "postcss-preset-env": "^7.7.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "swiper": "^8.2.4",
+    "tailwindcss": "^3.1.3"
   }
 }
