@@ -16,7 +16,12 @@ const Pages = ({ data }) => {
         />
         <div className="sir-container">
           <div className="space-y-5 text-left">
-            <div>Page Template</div>
+            <div>Page Template test</div>
+            <div>Page Template test</div>
+            <div>Page Template test</div>
+            <div>Page Template test</div>
+            <div>Page Template test</div>
+            <div>Page Template test</div>
             <h1 className="text-primary text-3xl font-bold">{item.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: item.content }} />
           </div>
