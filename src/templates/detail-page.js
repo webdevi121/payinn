@@ -26,6 +26,7 @@ const DetailPage = ({ data }) => {
             <div>
               <h2 className="text-xl font-bold">Categories</h2>
               <ul>
+                {console.log(data.allWpCategory)}
                 {data.allWpCategory.edges.map(({ node }) => (
                   <li key={node.id}>
                     <Link to={node.uri}>{node.name}</Link>
@@ -58,7 +59,7 @@ export const query = graphql`
         seoTitle
       }
     }
-    allWpCategory {
+    allWpCategory(filter: { count: { gt: 0 } }) {
       edges {
         node {
           uri
