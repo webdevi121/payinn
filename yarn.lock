@@ -5747,6 +5747,11 @@ gatsby-telemetry@^3.25.0:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
+gatsby-theme-headless-wordpress@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-headless-wordpress/-/gatsby-theme-headless-wordpress-0.1.13.tgz#5b3b5da5044d279ea7e21f12e79a093f1ee43aa9"
+  integrity sha512-5m2UDeYSQNRsS0IbG6Z+7aQmbsTQ0KheUisto9PYxONCJBKg+E7M+Vdw+ytjYanv2sbY+ZFueszBAmuDMVmz/A==
+
 gatsby-transformer-json@^4.16.0:
   version "4.25.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.25.0.tgz#5d169f3479b1d216234936f294a23c8385b5a1d8"

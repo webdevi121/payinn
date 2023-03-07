@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Seo from "components/seo"
 import Layout from "components/layout"
 import Mailchimp from "components/mailchimp"
@@ -15,10 +15,24 @@ const DetailPage = ({ data }) => {
           description={item.acfSeoData.seoDescription}
         />
         <div className="sir-container">
-          <div className="space-y-5 text-left">
-            <div className="mb-6 text-center text-4xl">General Detail Page</div>
-            <h1 className="text-primary text-3xl font-bold">{item.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: item.content }} />
+          <div className="flex space-x-3">
+            <div className="space-y-5 text-left">
+              <div className="mb-6 text-center text-4xl">
+                General Detail Page
+              </div>
+              <h1 className="text-primary text-3xl font-bold">{item.title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: item.content }} />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold">Categories</h2>
+              <ul>
+                {data.allWpCategory.edges.map(({ node }) => (
+                  <li key={node.id}>
+                    <Link to={node.uri}>{node.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="broder-t mt-10 pt-5">
             <Mailchimp />
@@ -42,6 +56,16 @@ export const query = graphql`
       acfSeoData {
         seoDescription
         seoTitle
+      }
+    }
+    allWpCategory {
+      edges {
+        node {
+          uri
+          name
+          slug
+          id
+        }
       }
     }
   }
