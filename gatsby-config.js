@@ -23,7 +23,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
-    `gatsby-theme-headless-wordpress`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
