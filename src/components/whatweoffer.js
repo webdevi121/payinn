@@ -5,34 +5,38 @@ const WhatWeOffer = props => {
     <React.Fragment>
       <div className="min-h-[50vh] py-20">
         <div className="theme-container">
-          <div className="grid grid-cols-2 items-center">
-            <div>
+          <div className="grid grid-cols-2 items-center gap-10">
+            <div className="pr-14">
               <img
                 src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/whatWeOfferImage.png"
                 alt=""
               />
             </div>
-            <div>
+            <div className="layout">
               <h2 className="mb-5 text-4xl font-bold">What We Offer</h2>
               <ul className="space-y-3">
-                <li className="flex space-x-3">
-                  <svg viewBox="0 0 26 27" width="26" height="27">
-                    <g>
-                      <path
-                        fill="var(--primary-color)"
-                        d="M11,16.5l-4-3.5l-1,1.1l4.5,4c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2L21,8L20,7L11,16.5z"
-                      />
-                      <path
-                        fill="var(--primary-color)"
-                        d="M23,0H3C1.3,0,0,1.3,0,3v21c0,1.7,1.3,3,3,3h20c1.7,0,3-1.3,3-3V3C26,1.3,24.7,0,23,0z M24.5,24,c0,0.8-0.7,1.5-1.5,1.5H3c-0.8,0-1.5-0.7-1.5-1.5V3c0-0.8,0.7-1.5,1.5-1.5h20c0.8,0,1.5,0.7,1.5,1.5V24z"
-                      />
-                    </g>
-                  </svg>
-                  <span>
-                    Merchants can have the ability to offer customers PAY BY
-                    CRYPTO at your eCommerce checkout
-                  </span>
+                <li>
+                  Merchants can have the ability to offer customers PAY BY
+                  CRYPTO at your eCommerce checkout
                 </li>
+                <li>
+                  Customers use their existing crypto holdings (BTC, ETH or
+                  USDT) to transact.
+                </li>
+                <li>
+                  Instant / Real time approvals, receive funds same day / next
+                  day
+                </li>
+                <li>
+                  Wallet agnostic – works with a Hot Wallet from major Crypto
+                  Exchanges, without the need for your customers to register
+                </li>
+                <li>Simple API integration</li>
+                <li>
+                  In-country funds settled in multiple jurisdictions and settled
+                  in these currencies – AUD /USD / BTC / ETH / USDT.
+                </li>
+                <li>No cost to you, the Merchant</li>
               </ul>
             </div>
           </div>
