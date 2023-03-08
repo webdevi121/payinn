@@ -14,7 +14,7 @@ const Pages = ({ data }) => {
           title={item.acfSeoData.seoTitle}
           description={item.acfSeoData.seoDescription}
         />
-        <div className="sir-container">
+        <div className="theme-container">
           <div className="space-y-5 text-left">
             <div>Page Template test</div>
             <h1 className="text-primary text-3xl font-bold">{item.title}</h1>

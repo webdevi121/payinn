@@ -1,23 +1,27 @@
 :root {
-  --primary-color: #081C41;
-  --secondary-light: #bceac6;
+  --primary-color: #06b2e5;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'components/menu.scss';
-@import 'components/contact.scss';
-@import 'components/swiper.scss';
-@import 'components/video.scss';
-@import 'utilities/spacing.scss';
-@import 'utilities/post-reset.scss';
+@import "components/menu.scss";
+@import "components/contact.scss";
+@import "components/swiper.scss";
+@import "components/video.scss";
+@import "utilities/spacing.scss";
+@import "utilities/post-reset.scss";
 
 @layer base {
   // remove button tap highlight color on mobile
   html {
     -webkit-tap-highlight-color: transparent;
+    background: #f7f3f9;
+  }
+  body {
+    font-size: 18px;
+    @apply font-light;
   }
 }
 

@@ -14,25 +14,23 @@ module.exports = {
       lg: "992px",
       // => @media (min-width: 992px) { ... }
 
-      xl: "1200px",
+      xl: "1400px",
       // => @media (min-width: 1200px) { ... }
     },
     fontFamily: {
-      montserrat: ["Montserrat", "sans-serif"],
-      josefinSlab: ["Josefin Slab", "sans-serif"],
+      montserrat: ["Heebo", "sans-serif"],
     },
     container: {
       center: true,
     },
     extend: {
       colors: {
-        sir: {
+        theme: {
           primary: {
             DEFAULT: "var(--primary-color)",
           },
           secondary: {
-            DEFAULT: "#00AB55",
-            light: "var(--secondary-light)",
+            DEFAULT: "#02111D",
           },
           darkGray: "#666666",
           lightGray: "#fafafa",

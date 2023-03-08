@@ -58,7 +58,7 @@ export default class IndexPage extends React.Component {
             />
             <input
               type="submit"
-              className="cursor-pointer rounded-lg bg-sir-primary p-3 px-5 text-white"
+              className="cursor-pointer rounded-lg bg-theme-primary p-3 px-5 text-white"
             />
           </form>
         </div>

@@ -1,11 +1,11 @@
-.post-reset{
-    h2 {
-        @apply font-bold mb-2 text-2xl;
-    }
-    a{
-        @apply text-sir-secondary underline;
-    }
-    p{
-        @apply mb-4;
-    }
+.post-reset {
+  h2 {
+    @apply mb-2 text-2xl font-bold;
+  }
+  a {
+    @apply text-theme-secondary underline;
+  }
+  p {
+    @apply mb-4;
+  }
 }

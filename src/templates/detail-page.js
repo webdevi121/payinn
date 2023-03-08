@@ -14,7 +14,7 @@ const DetailPage = ({ data }) => {
           title={item.acfSeoData.seoTitle}
           description={item.acfSeoData.seoDescription}
         />
-        <div className="sir-container">
+        <div className="theme-container">
           <div className="flex space-x-3">
             <div className="space-y-5 text-left">
               <div className="mb-6 text-center text-4xl">

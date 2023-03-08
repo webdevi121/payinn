@@ -1,21 +1,21 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { UserCircleIcon } from "@heroicons/react/solid";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
-import "swiper/css";
-import "swiper/css/pagination";
+import React from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+import { UserCircleIcon } from "@heroicons/react/solid"
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline"
+import "swiper/css"
+import "swiper/css/pagination"
 
-const Reviews = (props) => {
+const Reviews = props => {
   return (
     <React.Fragment>
-      <div className="sir-container">
-        <div className="custom-controller z-30 sm:flex justify-end mb-10 space-x-3 text-white hidden">
+      <div className="theme-container">
+        <div className="custom-controller z-30 mb-10 hidden justify-end space-x-3 text-white sm:flex">
           <button className="swiper-button-prev">
-            <ChevronLeftIcon className="currentColor stroke-1 inline-block h-8 w-8" />
+            <ChevronLeftIcon className="currentColor inline-block h-8 w-8 stroke-1" />
           </button>
           <button className="swiper-button-next">
-            <ChevronRightIcon className="currentColor stroke-1 inline-block h-8 w-8" />
+            <ChevronRightIcon className="currentColor inline-block h-8 w-8 stroke-1" />
           </button>
         </div>
         <Swiper
@@ -48,7 +48,7 @@ const Reviews = (props) => {
         >
           {props.list.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="space-y-5 rounded-2xl text-black bg-sir-lightGray p-7 text-left">
+              <div className="space-y-5 rounded-2xl bg-theme-lightGray p-7 text-left text-black">
                 <div className="flex items-center space-x-3">
                   <UserCircleIcon className="h-12 w-12 text-gray-300" />
                   <div className="font-bold ">{item.reviewName}</div>
@@ -61,7 +61,7 @@ const Reviews = (props) => {
         </Swiper>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

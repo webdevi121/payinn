@@ -57,7 +57,7 @@ const MyForm = () => {
           />
           <button
             type="submit"
-            className="cursor-pointer rounded-lg bg-sir-primary p-3 px-5 text-white"
+            className="cursor-pointer rounded-lg bg-theme-primary p-3 px-5 text-white"
           >
             Send
           </button>

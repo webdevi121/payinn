@@ -10,7 +10,7 @@ const CategoryPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Seo title="title" description="description" />
-        <div className="sir-container">
+        <div className="theme-container">
           <div className="mb-10">
             <h1 className="text-3xl font-bold">Category {item.name}</h1>
             <div dangerouslySetInnerHTML={{ __html: item.description }} />
@@ -28,7 +28,7 @@ const CategoryPage = ({ data }) => {
                   <div className="space-y-3">
                     <Link
                       to={`/${node.slug}`}
-                      className="text-sir-secondary"
+                      className="text-theme-secondary"
                       alt={node.title}
                     >
                       <h2 className="text-xl font-bold">{node.title}</h2>
