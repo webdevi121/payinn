@@ -1,30 +1,21 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-
-const Menu = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "Our Services",
-    href: "/our-services",
-  },
-  {
-    name: "About Us",
-    href: "/about-us",
-  },
-  {
-    name: "Blog",
-    href: "/blog",
-  },
-  {
-    name: "Contact Us",
-    href: "/contact-us",
-  },
-]
+import { useStaticQuery, Link, graphql } from "gatsby"
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      wpMenu(locations: { eq: PRIMARY }) {
+        menuItems {
+          nodes {
+            label
+            uri
+            id
+          }
+        }
+      }
+    }
+  `)
+
   const [isOpen, setIsOpen] = useState(false)
   const toggleNavigationHandler = () => {
     setIsOpen(!isOpen)
@@ -50,10 +41,10 @@ const Header = () => {
               <Link to={`/`}>[Logo]</Link>
             </div>
             <ul className="border-b border-solid border-slate-700 text-left lg:m-auto lg:flex lg:space-x-10 lg:border-0">
-              {Menu.map(item => (
-                <li key={item.name} className="py-3 font-bold">
-                  <Link to={item.href} activeClassName="text-sir-secondary">
-                    {item.name}
+              {data.wpMenu.menuItems.nodes.map(item => (
+                <li key={item.id} className="py-3 font-bold">
+                  <Link to={item.uri} activeClassName="text-sir-secondary">
+                    {item.label}
                   </Link>
                 </li>
               ))}

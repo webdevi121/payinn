@@ -27,22 +27,30 @@ const Faq = props => {
     }
   `)
 
+  const faqItem = data.wp.acfOptionsGlobalOptions.acfFaq.faqRepeater
+
   return (
-    <div className="">
-      <h2 className="mb-3 text-2xl font-bold">Common Enquiries</h2>
-      <Accordion>
-        {data.wp.acfOptionsGlobalOptions.acfFaq.faqRepeater.map(
-          (item, index) => (
-            <AccordionItem key={index}>
-              <AccordionItemHeading>
-                <AccordionItemButton>{item.questionText}</AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>{item.answerText}</AccordionItemPanel>
-            </AccordionItem>
-          )
-        )}
-      </Accordion>
-    </div>
+    <>
+      {faqItem ? (
+        <div className="">
+          <h2 className="mb-3 text-2xl font-bold">Common Enquiries</h2>
+          <Accordion>
+            {data.wp.acfOptionsGlobalOptions.acfFaq.faqRepeater.map(
+              (item, index) => (
+                <AccordionItem key={index}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      {item.questionText}
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>{item.answerText}</AccordionItemPanel>
+                </AccordionItem>
+              )
+            )}
+          </Accordion>
+        </div>
+      ) : null}
+    </>
   )
 }
 
