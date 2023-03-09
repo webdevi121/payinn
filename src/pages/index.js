@@ -4,6 +4,7 @@ import { getImage } from "gatsby-plugin-image"
 import Seo from "components/seo"
 import Layout from "components/layout"
 import LeftImageRightContent from "../components/leftImageRightContent"
+import RightImageLeftContent from "../components/rightImageLeftContent"
 import BannerSection from "../components/bannerSection"
 
 const Homepage = ({ data }) => {
@@ -19,11 +20,21 @@ const Homepage = ({ data }) => {
           <div key={index}>
             {node.rightContent ? (
               <LeftImageRightContent
+                title={node.section_title}
                 content={node.rightContent}
                 image={getImage(node.leftImage.gatsbyImage)}
                 buttonLabel={node.buttonLabel}
                 buttonLink={node.buttonLink.url}
-                buttonTitle={node.buttonLink.title}
+              />
+            ) : null}
+
+            {node.leftContent ? (
+              <RightImageLeftContent
+                title={node.sectionTitle2}
+                content={node.leftContent}
+                image={getImage(node.rightImage.gatsbyImage)}
+                buttonLabel={node.buttonLabel2 ? node.buttonLabel2 : null}
+                buttonLink={node.buttonLink2 ? node.buttonLink2.url : null}
               />
             ) : null}
           </div>
@@ -42,13 +53,24 @@ export const query = graphql`
         sectionContent {
           ... on WpPage_Acfpagesections_SectionContent_LeftImageRightContent {
             rightContent
+            sectionTitle
             leftImage {
               gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
             }
             buttonLabel
             buttonLink {
               url
-              title
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_RightImageLeftContent {
+            leftContent
+            sectionTitle2
+            rightImage {
+              gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
+            }
+            buttonLabel2
+            buttonLink2 {
+              url
             }
           }
         }
