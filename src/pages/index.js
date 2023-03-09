@@ -15,12 +15,12 @@ const Homepage = ({ data }) => {
           title="Building Inspection Reports"
           description="Building Inspection Report Made Easy, Best for vehicle inspection report, rental inspection checklist, house inspection checklist and inspection report template. Try it FREE!"
         />
-        <BannerSection />
+        {/* <BannerSection /> */}
         {data.wpPage.acfPageSections.sectionContent.map((node, index) => (
           <div key={index}>
             {node.rightContent ? (
               <LeftImageRightContent
-                title={node.section_title}
+                title={node.sectionTitle}
                 content={node.rightContent}
                 image={getImage(node.leftImage.gatsbyImage)}
                 buttonLabel={node.buttonLabel}
@@ -71,6 +71,12 @@ export const query = graphql`
             buttonLabel2
             buttonLink2 {
               url
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_CustomerJourney {
+            journeyRepeater {
+              stageTitle
+              stageDescription
             }
           }
         }
