@@ -50,7 +50,7 @@ const BannerSection = props => {
               </h2>
               <p>{item.acfHomepage.headingText}</p>
               <div>
-                <Link>
+                <Link to="">
                   <button className="h-12 w-auto rounded-2xl bg-theme-primary px-7 py-2 text-base font-bold text-white">
                     <div className="flex justify-center">
                       <div>{item.acfHomepage.ctaText}</div>

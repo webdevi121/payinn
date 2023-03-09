@@ -1,22 +1,30 @@
-import React from "react";
+import React from "react"
+import { navigate } from "gatsby"
 
-const Button = (props) => {
-  const IconComponent = props.icon;
+const Button = props => {
+  const IconComponent = props.icon
   return (
-    <button
-      className={`rounded-2xl px-7 py-2 text-base font-bold text-white ${props.classes}`}
-      type={props.type}
-    >
-      <div className="flex justify-center">
-        {props.icon ? (
-          <div className="mr-3">
-            <IconComponent className="h-6 w-6" aria-hidden="true" />
+    <>
+      {props.link ? (
+        <button
+          className={`rounded-2xl bg-theme-primary px-8 py-3 text-lg font-medium text-white`}
+          type={props.type}
+          onClick={() => {
+            navigate(props.link)
+          }}
+        >
+          <div className="flex justify-center">
+            {props.icon ? (
+              <div className="mr-3">
+                <IconComponent className="h-6 w-6" aria-hidden="true" />
+              </div>
+            ) : null}
+            <div>{props.name}</div>
           </div>
-        ) : null}
-        <div>{props.name}</div>
-      </div>
-    </button>
-  );
-};
+        </button>
+      ) : null}
+    </>
+  )
+}
 
-export default Button;
+export default Button
