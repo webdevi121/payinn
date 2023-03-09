@@ -1,7 +1,8 @@
 import React from "react"
 import { getImage } from "gatsby-plugin-image"
-import LeftImageRightContent from "../components/leftImageRightContent"
-import RightImageLeftContent from "../components/rightImageLeftContent"
+import LeftImageRightContent from "./leftImageRightContent"
+import RightImageLeftContent from "./rightImageLeftContent"
+import BannerSection from "./bannerSection"
 
 const Pages = props => {
   const data = props.data
@@ -10,6 +11,23 @@ const Pages = props => {
       {data.wpPage.acfPageSections.sectionContent
         ? data.wpPage.acfPageSections.sectionContent.map((node, index) => (
             <div key={index}>
+              {node.bannerHeadingTitle ? (
+                <BannerSection
+                  title={node.bannerHeadingTitle}
+                  content={node.bannerDescription}
+                  buttonLabel={
+                    node.bannerButtonLabel ? node.bannerButtonLabel : null
+                  }
+                  bannerButtonLink={
+                    node.bannerButtonLink ? node.bannerButtonLink.url : null
+                  }
+                  thumbnail={getImage(node.bannerThumbnail.gatsbyImage)}
+                  backgroundImage={getImage(
+                    node.bannerFullWidthBackground.gatsbyImage
+                  )}
+                />
+              ) : null}
+
               {node.rightContent ? (
                 <LeftImageRightContent
                   title={node.sectionTitle}

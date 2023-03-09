@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import PageSection from "../components/pageSection"
-import BannerSection from "../components/bannerSection"
 
 const Pages = ({ data }) => {
   return (
@@ -13,7 +12,6 @@ const Pages = ({ data }) => {
           title="Building Inspection Reports"
           description="Building Inspection Report Made Easy, Best for vehicle inspection report, rental inspection checklist, house inspection checklist and inspection report template. Try it FREE!"
         />
-        <BannerSection />
         <PageSection data={data} />
       </Layout>
     </React.Fragment>
@@ -27,6 +25,30 @@ export const query = graphql`
     wpPage(slug: { eq: $slug }) {
       acfPageSections {
         sectionContent {
+          ... on WpPage_Acfpagesections_SectionContent_BannerSection {
+            bannerHeadingTitle
+            bannerDescription
+            bannerButtonLabel
+            bannerButtonLink {
+              url
+            }
+            bannerThumbnail {
+              gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
+            }
+            bannerFullWidthBackground {
+              gatsbyImage(
+                quality: 100
+                height: 500
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+              )
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_BannerSection {
+            bannerButtonLabel
+            bannerDescription
+            bannerHeadingTitle
+          }
           ... on WpPage_Acfpagesections_SectionContent_LeftImageRightContent {
             rightContent
             sectionTitle

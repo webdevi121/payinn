@@ -1,70 +1,33 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import Button from "./ui/button"
 
 const BannerSection = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      wpPage(isFrontPage: { eq: true }) {
-        acfHomepage {
-          ctaLink
-          ctaText
-          headingText
-          headingTitle
-          bannerThumbnail {
-            gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
-          }
-          bannerBackgroundImage {
-            gatsbyImage(
-              quality: 100
-              height: 500
-              placeholder: BLURRED
-              layout: FULL_WIDTH
-            )
-          }
-        }
-      }
-    }
-  `)
-
-  const item = data.wpPage
-
   return (
     <React.Fragment>
-      <div className="relative flex h-[60vh] items-center bg-theme-secondary text-white">
-        {item.acfHomepage.bannerBackgroundImage ? (
+      <div className="relative flex min-h-[80vh] items-center bg-theme-secondary text-white">
+        {props.backgroundImage ? (
           <div className="absolute bottom-0 left-0 w-full opacity-40">
-            <GatsbyImage
-              image={getImage(
-                item.acfHomepage.bannerBackgroundImage.gatsbyImage
-              )}
-              alt=""
-            />
+            <GatsbyImage image={props.backgroundImage} alt="Illustration" />
           </div>
         ) : null}
         <div className="theme-container relative">
           <div className="grid grid-cols-2 items-center gap-10 space-y-7 text-left">
-            <div className="space-y-7">
-              <h2 className="mb-3 font-bold lg:text-7xl">
-                {item.acfHomepage.headingTitle}
-              </h2>
-              <p>{item.acfHomepage.headingText}</p>
-              <div>
-                <Link to="">
-                  <button className="h-12 w-auto rounded-2xl bg-theme-primary px-7 py-2 text-base font-bold text-white">
-                    <div className="flex justify-center">
-                      <div>{item.acfHomepage.ctaText}</div>
-                    </div>
-                  </button>
-                </Link>
-              </div>
+            <div className="layout space-y-7">
+              <h2 className="mb-3 font-bold lg:text-7xl">{props.title}</h2>
+              <div dangerouslySetInnerHTML={{ __html: props.content }} />
+              {props.buttonLabel ? (
+                <div className="mt-10">
+                  <Button
+                    name={props.buttonLabel}
+                    link={props.bannerButtonLink}
+                  />
+                </div>
+              ) : null}
             </div>
-            {item.acfHomepage.bannerThumbnail ? (
+            {props.thumbnail ? (
               <div className="ml-auto overflow-hidden rounded-lg">
-                <GatsbyImage
-                  image={getImage(item.acfHomepage.bannerThumbnail.gatsbyImage)}
-                  alt=""
-                />
+                <GatsbyImage image={props.thumbnail} alt="Illustration" />
               </div>
             ) : null}
           </div>

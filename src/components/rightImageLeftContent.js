@@ -1,6 +1,5 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import PaymentGateWayLogos from "./paymentgateway"
 import Button from "./ui/button"
 
 const RightImageLeftContent = props => {
