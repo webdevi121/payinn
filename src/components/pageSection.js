@@ -6,6 +6,7 @@ import BannerSection from "./bannerSection"
 import CustomerJourney from "./customerjourney"
 import AboutDavid from "./about"
 import CaseStudies from "./caseStudy"
+import CtaFooter from "./ctaFooter"
 
 const Pages = props => {
   const data = props.data
@@ -56,6 +57,7 @@ const Pages = props => {
       <CustomerJourney title="Your Customer's Journey" />
       <AboutDavid title="About David" />
       <CaseStudies title="Case Studies" />
+      <CtaFooter />
     </React.Fragment>
   )
 }

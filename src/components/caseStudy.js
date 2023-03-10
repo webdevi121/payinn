@@ -9,7 +9,7 @@ const CaseStudies = props => {
         <div className="theme-container">
           <div className="flex items-center space-x-10">
             <div className="layout">
-              <h2 className="mb-5 text-4xl font-bold text-theme-primary">
+              <h2 className="mb-10 text-4xl font-bold text-theme-primary">
                 {props.title}
               </h2>
               <div>
@@ -31,7 +31,7 @@ const CaseStudies = props => {
                   $500m for a bottom line benefit of ~$1M .p.a.
                 </p>
               </div>
-              <div>
+              <div className="mt-12">
                 <div className="flex flex-col items-center rounded-lg bg-white/10 p-3">
                   <div className="flex space-x-3">
                     <div className="text-3xl font-bold">29%</div>
