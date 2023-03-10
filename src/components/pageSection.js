@@ -3,6 +3,9 @@ import { getImage } from "gatsby-plugin-image"
 import LeftImageRightContent from "./leftImageRightContent"
 import RightImageLeftContent from "./rightImageLeftContent"
 import BannerSection from "./bannerSection"
+import CustomerJourney from "./customerjourney"
+import AboutDavid from "./about"
+import CaseStudies from "./caseStudy"
 
 const Pages = props => {
   const data = props.data
@@ -50,6 +53,9 @@ const Pages = props => {
             </div>
           ))
         : null}
+      <CustomerJourney title="Your Customer's Journey" />
+      <AboutDavid title="About David" />
+      <CaseStudies title="Case Studies" />
     </React.Fragment>
   )
 }
