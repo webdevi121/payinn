@@ -72,6 +72,27 @@ export const query = graphql`
               stageDescription
             }
           }
+          ... on WpPage_Acfpagesections_SectionContent_CaseStudies {
+            caseStudiesRepeater {
+              caseStudiesTitle
+              caseStudiesDescription
+              caseStudiesThumbnail {
+                gatsbyImage(
+                  width: 500
+                  quality: 100
+                  height: 500
+                  placeholder: BLURRED
+                )
+              }
+              graphRepeater {
+                graphValue
+                smallText
+                imageGraph {
+                  gatsbyImage(width: 55, placeholder: BLURRED, height: 30)
+                }
+              }
+            }
+          }
         }
       }
     }

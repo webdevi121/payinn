@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Button from "./ui/button"
 
 const AboutDavid = props => {
@@ -66,14 +65,14 @@ const AboutDavid = props => {
                   <div>Founder & CO</div>
                 </div>
                 <div>
-                  <Link to="https://au.linkedin.com/">
+                  <a href="https://au.linkedin.com/">
                     <img
                       src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/linkedin-logo.png"
                       alt=""
                       width="82"
                       className="inline-block"
                     />
-                  </Link>
+                  </a>
                 </div>
                 <div>
                   <Button name="Get Started" link="/contact/" />

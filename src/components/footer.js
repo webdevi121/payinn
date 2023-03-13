@@ -64,14 +64,14 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h2 className="mb-3 text-base font-bold">Contact Us</h2>
+                <h2 className="mb-3 text-lg font-bold">Contact Us</h2>
                 <div>
                   <div>202 Helga Springs Rd, Crawford, TN 38554</div>
                   <div>000 info@payinn.com</div>
                 </div>
               </div>
               <div>
-                <h2 className="mb-3 text-base font-bold">Links</h2>
+                <h2 className="mb-3 text-lg font-bold">Links</h2>
                 <div className="flex flex-col">
                   <Link to="/">Home</Link>
                   <Link to="/">Least Cost Routing</Link>

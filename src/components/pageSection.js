@@ -5,7 +5,7 @@ import RightImageLeftContent from "./rightImageLeftContent"
 import BannerSection from "./bannerSection"
 import CustomerJourney from "./customerjourney"
 import AboutDavid from "./about"
-import CaseStudies from "./caseStudy"
+import CaseStudies from "./caseStudies"
 import CtaFooter from "./ctaFooter"
 
 const Pages = props => {
@@ -51,12 +51,18 @@ const Pages = props => {
                   buttonLink={node.buttonLink2 ? node.buttonLink2.url : null}
                 />
               ) : null}
+
+              {node.caseStudiesRepeater ? (
+                <CaseStudies
+                  title="Case Studies"
+                  list={node.caseStudiesRepeater}
+                />
+              ) : null}
             </div>
           ))
         : null}
       <CustomerJourney title="Your Customer's Journey" />
       <AboutDavid title="About David" />
-      <CaseStudies title="Case Studies" />
       <CtaFooter />
     </React.Fragment>
   )
