@@ -33,13 +33,13 @@ export const query = graphql`
               url
             }
             bannerThumbnail {
-              gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
+              gatsbyImage(quality: 100, width: 580, placeholder: NONE)
             }
             bannerFullWidthBackground {
               gatsbyImage(
                 quality: 100
                 height: 500
-                placeholder: BLURRED
+                placeholder: NONE
                 layout: FULL_WIDTH
               )
             }
@@ -53,7 +53,7 @@ export const query = graphql`
             rightContent
             sectionTitle
             leftImage {
-              gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
+              gatsbyImage(quality: 100, placeholder: NONE, height: 557)
             }
             buttonLabel
             buttonLink {
@@ -64,7 +64,7 @@ export const query = graphql`
             leftContent
             sectionTitle2
             rightImage {
-              gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
+              gatsbyImage(quality: 100, placeholder: NONE, height: 557)
             }
             buttonLabel2
             buttonLink2 {
