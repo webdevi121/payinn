@@ -93,6 +93,13 @@ export const query = graphql`
               }
             }
           }
+          ... on WpPage_Acfpagesections_SectionContent_AboutUs {
+            aboutContent
+            aboutHeadingTitle
+            aboutUsThumbnail {
+              gatsbyImage(width: 357, height: 357, placeholder: BLURRED)
+            }
+          }
         }
       }
     }

@@ -9,9 +9,12 @@ import "swiper/css/pagination"
 const CaseStudies = props => {
   return (
     <React.Fragment>
-      <div className="relative min-h-[50vh] bg-theme-secondary py-20 text-white">
+      <div className="relative min-h-[50vh] bg-theme-secondary pt-20 text-white">
         <div className="theme-container relative">
-          <div className="absolute -top-14 right-0 z-30 mr-3 mb-10 hidden justify-end space-x-3 text-white sm:flex">
+          <h2 className="mb-20 text-4xl font-bold text-theme-primary">
+            Case Studies
+          </h2>
+          <div className="absolute top-0 right-0 z-30 mr-3 mb-10 hidden justify-end space-x-3 text-white sm:flex">
             <button className="swiper-button-prev">
               <ChevronLeftIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
             </button>
@@ -53,9 +56,9 @@ const CaseStudies = props => {
                 <SwiperSlide key={index}>
                   <div className="flex space-x-20">
                     <div className="layout">
-                      <h2 className="mb-10 text-4xl font-bold text-theme-primary">
+                      <h3 className="mb-10 text-3xl font-bold text-white">
                         {item.caseStudiesTitle}
-                      </h2>
+                      </h3>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: item.caseStudiesDescription,

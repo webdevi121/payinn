@@ -81,7 +81,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-center border-t border-white/10 py-5">
-              <div>Copyright ©2023 Toka. All rights reserved.</div>
+              <div>Copyright ©2023 PayInn. All rights reserved.</div>
               <div className="ml-auto">
                 <Link to="/">
                   <img

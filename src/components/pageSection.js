@@ -57,7 +57,13 @@ const Pages = props => {
                   list={node.journeyRepeater}
                 />
               ) : null}
-
+              {node.aboutHeadingTitle ? (
+                <AboutDavid
+                  title={node.aboutHeadingTitle}
+                  content={node.aboutContent}
+                  image={getImage(node.aboutUsThumbnail.gatsbyImage)}
+                />
+              ) : null}
               {node.caseStudiesRepeater ? (
                 <CaseStudies
                   title="Case Studies"
@@ -68,7 +74,6 @@ const Pages = props => {
           ))
         : null}
 
-      <AboutDavid title="About David" />
       <CtaFooter />
     </React.Fragment>
   )
