@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Button from "./ui/button"
+import Cta from "./cta"
 
 const BannerSection = props => {
   return (
@@ -18,10 +18,7 @@ const BannerSection = props => {
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
               {props.buttonLabel ? (
                 <div className="mt-10">
-                  <Button
-                    name={props.buttonLabel}
-                    link={props.bannerButtonLink}
-                  />
+                  <Cta />
                 </div>
               ) : null}
             </div>

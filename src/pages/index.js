@@ -100,6 +100,18 @@ export const query = graphql`
               gatsbyImage(width: 357, height: 357, placeholder: BLURRED)
             }
           }
+          ... on WpPage_Acfpagesections_SectionContent_PaymentGateways {
+            paymentLogosRepeater {
+              paymentLogo {
+                gatsbyImage(
+                  placeholder: BLURRED
+                  height: 60
+                  width: 267
+                  fit: CONTAIN
+                )
+              }
+            }
+          }
         }
       }
     }

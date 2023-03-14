@@ -1,7 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import PaymentGateWayLogos from "./paymentgateway"
-import Button from "./ui/button"
+import Cta from "./cta"
 
 const LeftImageRightContent = props => {
   return (
@@ -17,17 +16,12 @@ const LeftImageRightContent = props => {
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
               {props.buttonLabel ? (
                 <div className="mt-10">
-                  <Button
-                    name={props.buttonLabel}
-                    link={props.buttonLink}
-                    title={props.buttonTitle}
-                  />
+                  <Cta />
                 </div>
               ) : null}
             </div>
           </div>
         </div>
-        <PaymentGateWayLogos />
       </div>
     </React.Fragment>
   )

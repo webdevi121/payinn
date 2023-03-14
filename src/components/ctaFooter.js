@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "./ui/button"
+import Cta from "./cta"
 
 const CtaFooter = props => {
   return (
@@ -18,7 +18,7 @@ const CtaFooter = props => {
               Looking for a payment gateway you'll love? You're in luck.
             </h2>
             <div>
-              <Button name="Get Started" link="/contact/" />
+              <Cta />
             </div>
           </div>
         </div>

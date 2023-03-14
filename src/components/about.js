@@ -1,6 +1,6 @@
 import React from "react"
-import Button from "./ui/button"
 import { GatsbyImage } from "gatsby-plugin-image"
+import Cta from "./cta"
 
 const AboutDavid = props => {
   return (
@@ -36,7 +36,7 @@ const AboutDavid = props => {
                   </a>
                 </div>
                 <div>
-                  <Button name="Get Started" link="/contact/" />
+                  <Cta />
                 </div>
               </div>
             </div>
