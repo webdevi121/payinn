@@ -2,6 +2,7 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline"
 import "swiper/css"
 import "swiper/css/pagination"
 
@@ -9,12 +10,21 @@ const CaseStudies = props => {
   return (
     <React.Fragment>
       <div className="relative min-h-[50vh] bg-theme-secondary py-20 text-white">
-        <div className="theme-container">
+        <div className="theme-container relative">
+          <div className="absolute -top-14 right-0 z-30 mr-3 mb-10 hidden justify-end space-x-3 text-white sm:flex">
+            <button className="swiper-button-prev">
+              <ChevronLeftIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
+            </button>
+            <button className="swiper-button-next">
+              <ChevronRightIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
+            </button>
+          </div>
           <div className="">
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={1}
+              autoHeight={true}
               pagination={{
                 el: ".swiper-pagination",
                 type: "bullets",
@@ -77,10 +87,10 @@ const CaseStudies = props => {
                     </div>
                     <div className="space-y-5 text-center">
                       <div className="h-[500px] w-[500px] opacity-50">
-                        <img
-                          src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/hand-token.png"
-                          alt=""
-                          className="object-cover"
+                        <GatsbyImage
+                          image={getImage(item.caseStudiesThumbnail)}
+                          alt="Illustration"
+                          class="object-cover"
                         />
                       </div>
                     </div>

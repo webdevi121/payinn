@@ -15,6 +15,31 @@ const CustomerJourney = props => {
           <h2 className="mb-5 text-4xl font-bold text-theme-primary">
             {props.title}
           </h2>
+          <div>
+            <div className="journey-container">
+              <div className="jc-scroll-box">
+                <div className="jc-wrap">
+                  {props.list?.map((item, index) => (
+                    <div className="journey-item" key={index}>
+                      <div
+                        className="roadmap-content"
+                        style={{ color: `var(--accent-color-${index})` }}
+                      >
+                        <span
+                          className="dot"
+                          style={{ color: `var(--accent-color-${index})` }}
+                        ></span>
+                        <h4 className="title">{item.stageTitle}</h4>
+                        <div className="text-white">
+                          {item.stageDescription}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>

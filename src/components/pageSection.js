@@ -51,6 +51,12 @@ const Pages = props => {
                   buttonLink={node.buttonLink2 ? node.buttonLink2.url : null}
                 />
               ) : null}
+              {node.journeyRepeater ? (
+                <CustomerJourney
+                  title="Your Customer's Journey"
+                  list={node.journeyRepeater}
+                />
+              ) : null}
 
               {node.caseStudiesRepeater ? (
                 <CaseStudies
@@ -61,7 +67,7 @@ const Pages = props => {
             </div>
           ))
         : null}
-      <CustomerJourney title="Your Customer's Journey" />
+
       <AboutDavid title="About David" />
       <CtaFooter />
     </React.Fragment>
