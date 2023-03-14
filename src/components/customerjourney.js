@@ -12,7 +12,7 @@ const CustomerJourney = props => {
           />
         </div>
         <div className="theme-container relative">
-          <h2 className="mb-5 text-4xl font-bold text-theme-primary">
+          <h2 className="mb-20 text-center text-4xl font-bold text-theme-primary">
             {props.title}
           </h2>
           <div>
@@ -26,12 +26,20 @@ const CustomerJourney = props => {
                         style={{ color: `var(--accent-color-${index})` }}
                       >
                         <span
-                          className="dot"
+                          className="dot relative"
                           style={{ color: `var(--accent-color-${index})` }}
-                        ></span>
-                        <h4 className="title">{item.stageTitle}</h4>
-                        <div className="text-white">
-                          {item.stageDescription}
+                        >
+                          <span className="dot-title">
+                            <h4 className="font-bold">{item.stageTitle}</h4>
+                          </span>
+                        </span>
+
+                        <div className="content">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: item.stageDescription,
+                            }}
+                          />
                         </div>
                       </div>
                     </div>

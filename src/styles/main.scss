@@ -80,11 +80,11 @@ body {
     display: flex;
     padding: 0;
     min-height: 490px;
-    justify-content: center;
+    justify-content: flex-end;
     .journey-item {
-      margin-left: -110px;
+      margin-left: -140px;
       display: flex;
-      width: 370px;
+      width: 365px;
       flex: 0 0 auto;
       height: 253px;
       align-self: flex-end;
@@ -99,8 +99,29 @@ body {
         .dot {
           top: auto;
           bottom: 0;
+          .dot-title {
+            @apply top-[40px];
+          }
         }
       }
+      .content {
+        @apply text-white;
+        h2 {
+          @apply mb-3 font-bold;
+        }
+        p {
+          @apply text-sm opacity-70;
+        }
+      }
+    }
+    .journey-title {
+      display: inline-block;
+      color: currentColor;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      letter-spacing: 0.1em;
     }
     .roadmap-content {
       position: relative;
@@ -136,6 +157,9 @@ body {
           height: 32px;
           opacity: 0.1;
           border-radius: 50%;
+        }
+        .dot-title {
+          @apply absolute -left-[105px] -top-[40px] m-auto min-w-[230px] text-center;
         }
       }
       .title {
