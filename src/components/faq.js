@@ -12,7 +12,9 @@ const Faq = props => {
     <React.Fragment>
       <div className="bg-theme-secondary py-20 text-white">
         <div className="theme-container relative">
-          <h2 className="mb-5 text-4xl font-bold">Common Enquiries</h2>
+          <h2 className="mb-10 text-4xl font-bold text-theme-primary">
+            Common Enquiries
+          </h2>
           <Accordion allowZeroExpanded className="grid grid-cols-2 gap-3">
             {props.list.map((item, index) => (
               <AccordionItem key={index}>

@@ -14,95 +14,153 @@ const CaseStudies = props => {
           <h2 className="mb-20 text-4xl font-bold text-theme-primary">
             Case Studies
           </h2>
-          <div className="absolute top-0 right-0 z-30 mr-3 mb-10 hidden justify-end space-x-3 text-white sm:flex">
-            <button className="swiper-button-prev">
-              <ChevronLeftIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
-            </button>
-            <button className="swiper-button-next">
-              <ChevronRightIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
-            </button>
-          </div>
-          <div className="">
-            <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
-              slidesPerView={1}
-              autoHeight={true}
-              pagination={{
-                el: ".swiper-pagination",
-                type: "bullets",
-              }}
-              navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              }}
-              breakpoints={{
-                320: {
-                  slidesPerView: "auto",
-                  spaceBetween: 15,
-                  navigation: false,
-                },
-                768: {
-                  slidesPerView: 1,
-                  pagination: false,
-                },
-                1024: {
-                  slidesPerView: 1,
-                  pagination: false,
-                },
-              }}
-            >
+          {props.layout ? (
+            <div className="space-y-10">
               {props.list?.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="flex space-x-20">
-                    <div className="layout">
-                      <h3 className="mb-10 text-3xl font-bold text-white">
-                        {item.caseStudiesTitle}
-                      </h3>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: item.caseStudiesDescription,
-                        }}
-                      />
-                      <div className="mt-12">
-                        <div className="flex space-x-5">
-                          {item.graphRepeater?.map((item, index) => (
-                            <div
-                              key={index}
-                              className="flex w-full flex-col items-center rounded-lg bg-white/10 p-3"
-                            >
-                              <div className="flex space-x-3">
-                                <div className="text-3xl font-bold">
-                                  {item.graphValue}
-                                </div>
-                                <div>
-                                  <GatsbyImage
-                                    image={getImage(item.imageGraph)}
-                                    alt="Illustration"
-                                  />
-                                </div>
+                <div
+                  key={index}
+                  className="flex space-x-20 even:flex-row-reverse even:space-x-reverse"
+                >
+                  <div className="layout">
+                    <h3 className="mb-10 text-3xl font-bold text-white">
+                      {item.caseStudiesTitle}
+                    </h3>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.caseStudiesDescription,
+                      }}
+                    />
+                    <div className="mt-12">
+                      <div className="flex space-x-5">
+                        {item.graphRepeater?.map((item, index) => (
+                          <div
+                            key={index}
+                            className="flex w-full flex-col items-center rounded-lg bg-white/10 p-3"
+                          >
+                            <div className="flex space-x-3">
+                              <div className="text-3xl font-bold">
+                                {item.graphValue}
                               </div>
-                              <div className="text-sm">{item.smallText}</div>
+                              <div>
+                                <GatsbyImage
+                                  image={getImage(item.imageGraph)}
+                                  alt="Illustration"
+                                />
+                              </div>
                             </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="space-y-5 text-center">
-                      <div className="h-[500px] w-[500px] opacity-50">
-                        <GatsbyImage
-                          image={getImage(item.caseStudiesThumbnail)}
-                          alt="Illustration"
-                          class="object-cover"
-                        />
+                            <div className="text-sm">{item.smallText}</div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
+                  <div className="space-y-5 text-center">
+                    <div className="h-[500px] w-[500px] opacity-50">
+                      <GatsbyImage
+                        image={getImage(item.caseStudiesThumbnail)}
+                        alt="Illustration"
+                        class="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               ))}
-              <div className="swiper-pagination"></div>
-            </Swiper>
-          </div>
+            </div>
+          ) : (
+            <>
+              <div className="absolute top-0 right-0 z-30 mr-3 mb-10 hidden justify-end space-x-3 text-white sm:flex">
+                <button className="swiper-button-prev">
+                  <ChevronLeftIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
+                </button>
+                <button className="swiper-button-next">
+                  <ChevronRightIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
+                </button>
+              </div>
+              <div className="">
+                <Swiper
+                  modules={[Navigation, Pagination, Scrollbar, A11y]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  autoHeight={true}
+                  pagination={{
+                    el: ".swiper-pagination",
+                    type: "bullets",
+                  }}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: "auto",
+                      spaceBetween: 15,
+                      navigation: false,
+                    },
+                    768: {
+                      slidesPerView: 1,
+                      pagination: false,
+                    },
+                    1024: {
+                      slidesPerView: 1,
+                      pagination: false,
+                    },
+                  }}
+                >
+                  {props.list?.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="flex space-x-20">
+                        <div className="layout">
+                          <h3 className="mb-10 text-3xl font-bold text-white">
+                            {item.caseStudiesTitle}
+                          </h3>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: item.caseStudiesDescription,
+                            }}
+                          />
+                          <div className="mt-12">
+                            <div className="flex space-x-5">
+                              {item.graphRepeater?.map((item, index) => (
+                                <div
+                                  key={index}
+                                  className="flex w-full flex-col items-center rounded-lg bg-white/10 p-3"
+                                >
+                                  <div className="flex space-x-3">
+                                    <div className="text-3xl font-bold">
+                                      {item.graphValue}
+                                    </div>
+                                    <div>
+                                      <GatsbyImage
+                                        image={getImage(item.imageGraph)}
+                                        alt="Illustration"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="text-sm">
+                                    {item.smallText}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="space-y-5 text-center">
+                          <div className="h-[500px] w-[500px] opacity-50">
+                            <GatsbyImage
+                              image={getImage(item.caseStudiesThumbnail)}
+                              alt="Illustration"
+                              class="object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                  <div className="swiper-pagination"></div>
+                </Swiper>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </React.Fragment>

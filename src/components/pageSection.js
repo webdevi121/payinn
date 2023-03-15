@@ -74,6 +74,7 @@ const Pages = props => {
                 <CaseStudies
                   title="Case Studies"
                   list={node.caseStudiesRepeater}
+                  layout={node.switchViewCaseStudies}
                 />
               ) : null}
               {node.faqRepeater ? <Faq list={node.faqRepeater} /> : null}
