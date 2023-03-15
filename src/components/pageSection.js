@@ -6,7 +6,7 @@ import BannerSection from "./bannerSection"
 import CustomerJourney from "./customerjourney"
 import AboutDavid from "./about"
 import CaseStudies from "./caseStudies"
-import PaymentGateWay from "./paymentGateway"
+import PaymentGateWayLogos from "./paymentGateway"
 import CtaFooter from "./ctaFooter"
 import Faq from "./faq"
 
@@ -45,7 +45,7 @@ const Pages = props => {
               ) : null}
 
               {node.paymentLogosRepeater ? (
-                <PaymentGateWay list={node.paymentLogosRepeater} />
+                <PaymentGateWayLogos list={node.paymentLogosRepeater} />
               ) : null}
 
               {node.leftContent ? (
