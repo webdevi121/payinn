@@ -1,29 +1,8 @@
-/**
-* ----------------------------------------------
-* Demo styles
-* ----------------------------------------------
-**/
-.accordion {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-}
-
-.accordion__item + .accordion__item {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .accordion__button {
-  background-color: #f4f4f4;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-}
-
-.accordion__button:hover {
-  background-color: #f0f0f0;
+  @apply relative w-full cursor-pointer rounded-lg border border-[#304457] p-4 pl-10 text-left font-medium hover:bg-[#222e39];
+  &[aria-expanded="true"] {
+    @apply rounded-b-none border-b-0 bg-[#222e39];
+  }
 }
 
 .accordion__button:before {
@@ -36,8 +15,10 @@
   border-right: 2px solid currentColor;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  position: absolute;
+  top: 22px;
+  left: 15px;
 }
-
 .accordion__button[aria-expanded="true"]::before,
 .accordion__button[aria-selected="true"]::before {
   -webkit-transform: rotate(45deg);
@@ -49,5 +30,9 @@
 }
 
 .accordion__panel {
-  padding: 20px;
+  @apply rounded-b-lg border-b border-l border-r border-[#304457] bg-[#222e39] p-4 opacity-80;
+  ul {
+    list-style: circle;
+    list-style-position: inside;
+  }
 }

@@ -8,6 +8,7 @@ import AboutDavid from "./about"
 import CaseStudies from "./caseStudies"
 import PaymentGateWay from "./paymentGateway"
 import CtaFooter from "./ctaFooter"
+import Faq from "./faq"
 
 const Pages = props => {
   const data = props.data
@@ -75,6 +76,7 @@ const Pages = props => {
                   list={node.caseStudiesRepeater}
                 />
               ) : null}
+              {node.faqRepeater ? <Faq list={node.faqRepeater} /> : null}
             </div>
           ))
         : null}

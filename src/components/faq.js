@@ -6,51 +6,30 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion"
-import "styles/components/faq.scss"
-import { useStaticQuery, graphql } from "gatsby"
 
 const Faq = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      wp {
-        acfOptionsGlobalOptions {
-          pageSlug
-          pageTitle
-          acfFaq {
-            faqRepeater {
-              answerText
-              questionText
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const faqItem = data.wp.acfOptionsGlobalOptions.acfFaq.faqRepeater
-
   return (
-    <>
-      {faqItem ? (
-        <div className="">
-          <h2 className="mb-3 text-2xl font-bold">Common Enquiries</h2>
-          <Accordion>
-            {data.wp.acfOptionsGlobalOptions.acfFaq.faqRepeater.map(
-              (item, index) => (
-                <AccordionItem key={index}>
-                  <AccordionItemHeading>
-                    <AccordionItemButton>
-                      {item.questionText}
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>{item.answerText}</AccordionItemPanel>
-                </AccordionItem>
-              )
-            )}
+    <React.Fragment>
+      <div className="bg-theme-secondary py-20 text-white">
+        <div className="theme-container relative">
+          <h2 className="mb-5 text-4xl font-bold">Common Enquiries</h2>
+          <Accordion allowZeroExpanded className="grid grid-cols-2 gap-3">
+            {props.list.map((item, index) => (
+              <AccordionItem key={index}>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    {item.questionField}
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div dangerouslySetInnerHTML={{ __html: item.answerField }} />
+                </AccordionItemPanel>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
-      ) : null}
-    </>
+      </div>
+    </React.Fragment>
   )
 }
 

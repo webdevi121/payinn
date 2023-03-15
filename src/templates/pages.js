@@ -44,11 +44,6 @@ export const query = graphql`
               )
             }
           }
-          ... on WpPage_Acfpagesections_SectionContent_BannerSection {
-            bannerButtonLabel
-            bannerDescription
-            bannerHeadingTitle
-          }
           ... on WpPage_Acfpagesections_SectionContent_LeftImageRightContent {
             rightContent
             sectionTitle
@@ -75,6 +70,47 @@ export const query = graphql`
             journeyRepeater {
               stageTitle
               stageDescription
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_CaseStudies {
+            caseStudiesRepeater {
+              caseStudiesTitle
+              caseStudiesDescription
+              caseStudiesThumbnail {
+                gatsbyImage(
+                  width: 500
+                  quality: 100
+                  height: 500
+                  placeholder: NONE
+                )
+              }
+              graphRepeater {
+                graphValue
+                smallText
+                imageGraph {
+                  gatsbyImage(width: 55, placeholder: NONE, height: 30)
+                }
+              }
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_AboutUs {
+            aboutContent
+            aboutHeadingTitle
+            aboutUsThumbnail {
+              gatsbyImage(width: 357, height: 357, placeholder: NONE)
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_PaymentGateways {
+            paymentLogosRepeater {
+              paymentLogo {
+                gatsbyImage(placeholder: NONE, height: 60, layout: FIXED)
+              }
+            }
+          }
+          ... on WpPage_Acfpagesections_SectionContent_FaqLayout {
+            faqRepeater {
+              questionField
+              answerField
             }
           }
         }
