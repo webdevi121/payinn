@@ -6,8 +6,9 @@ const LeftImageRightContent = props => {
   return (
     <React.Fragment>
       <div className="min-h-[50vh] py-20">
-        <div className="theme-container">
-          <div className="grid grid-cols-2 items-center gap-10">
+        <div className="theme-container relative">
+          <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
+          <div className="relative grid grid-cols-2 items-center gap-10">
             <div className="pr-14">
               <GatsbyImage image={props.image} alt="Illustration" />
             </div>

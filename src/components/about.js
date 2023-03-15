@@ -6,7 +6,8 @@ const AboutDavid = props => {
   return (
     <React.Fragment>
       <div className="relative min-h-[50vh] bg-transparent py-20">
-        <div className="theme-container">
+        <div className="theme-container relative">
+          <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
           <div className="flex items-center space-x-52">
             <div className="layout">
               <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>

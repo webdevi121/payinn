@@ -6,8 +6,9 @@ const RightImageLeftContent = props => {
   return (
     <React.Fragment>
       <div className="min-h-[50vh] py-20">
-        <div className="theme-container">
-          <div className="grid grid-cols-2 items-center gap-10">
+        <div className="theme-container relative">
+          <div className="absolute -top-20 left-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[150px]"></div>
+          <div className="relative grid grid-cols-2 items-center gap-10">
             <div className="layout">
               <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
