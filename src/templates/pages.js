@@ -67,6 +67,8 @@ export const query = graphql`
             }
           }
           ... on WpPage_Acfpagesections_SectionContent_CustomerJourney {
+            journeySectionTitle
+            sectionSubTextJourney
             journeyRepeater {
               stageTitle
               stageDescription

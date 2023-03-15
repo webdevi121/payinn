@@ -12,9 +12,14 @@ const CustomerJourney = props => {
           />
         </div>
         <div className="theme-container relative">
-          <h2 className="mb-20 text-center text-4xl font-bold text-theme-primary">
-            {props.title}
-          </h2>
+          <div className="mb-20 space-y-3 text-center">
+            <h2 className="text-4xl font-bold text-theme-primary">
+              {props.title}
+            </h2>
+            <div className="m-auto max-w-4xl font-medium text-white">
+              {props.content}
+            </div>
+          </div>
           <div>
             <div className="journey-container">
               <div className="jc-scroll-box">

@@ -16,11 +16,9 @@ const BannerSection = props => {
             <div className="layout space-y-7">
               <h2 className="mb-3 font-bold lg:text-7xl">{props.title}</h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
-              {props.buttonLabel ? (
-                <div className="mt-10">
-                  <Cta />
-                </div>
-              ) : null}
+              <div className="mt-10">
+                <Cta />
+              </div>
             </div>
             {props.thumbnail ? (
               <div className="ml-auto overflow-hidden rounded-lg">

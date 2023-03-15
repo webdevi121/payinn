@@ -59,7 +59,8 @@ const Pages = props => {
               ) : null}
               {node.journeyRepeater ? (
                 <CustomerJourney
-                  title="Your Customer's Journey"
+                  title={node.journeySectionTitle}
+                  content={node.sectionSubTextJourney}
                   list={node.journeyRepeater}
                 />
               ) : null}

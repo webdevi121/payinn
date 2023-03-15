@@ -95,7 +95,7 @@ body {
         align-self: flex-start;
         flex-direction: column-reverse;
         .roadmap-content {
-          padding: 0 0 110px 17px;
+          padding: 0 0 100px 17px;
         }
         .dot {
           top: auto;
@@ -111,7 +111,7 @@ body {
           @apply mb-3 font-bold;
         }
         p {
-          @apply text-sm opacity-70;
+          @apply mb-2 text-sm opacity-70;
         }
       }
     }
