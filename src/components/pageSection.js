@@ -6,7 +6,7 @@ import BannerSection from "./bannerSection"
 import CustomerJourney from "./customerjourney"
 import AboutDavid from "./about"
 import CaseStudies from "./caseStudies"
-import PaymentGateWayLogos from "./paymentGateway"
+import PaymentGateWayLogos from "./paymentGatewayLogos"
 import CtaFooter from "./ctaFooter"
 import Faq from "./faq"
 
