@@ -147,17 +147,16 @@ body {
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        &:before {
-          content: "";
+        .ping {
           background: currentColor;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 32px;
-          height: 32px;
-          opacity: 0.1;
           border-radius: 50%;
+          content: "";
+          height: 18px;
+          opacity: 0.6;
+          position: absolute;
+          width: 18px;
+          left: -1px;
+          top: -1px;
         }
         .dot-title {
           @apply absolute -left-[105px] -top-[40px] m-auto min-w-[230px] text-center;
