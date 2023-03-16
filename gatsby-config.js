@@ -6,15 +6,15 @@ require("dotenv").config({
 
 const path = require(`path`)
 const tailwindConfig = require("./tailwind.config.js")
-const siteUrl = process.env.URL || `https://headless.infusion121.com`
+const siteUrl = process.env.URL || `https://payinn.com.au`
 
 module.exports = {
   //configuration object
   siteMetadata: {
-    title: `Headless CMS Base`,
-    description: `Headless CMS Base`,
+    title: `PayInn - Payments Innovations`,
+    description: `Payments Innovations specialises in helping businesses large and Institutional enterprises discover the benefits of Australia’s rapidly changing Payments Processing Landscape.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://headless.infusion121.com`,
+    siteUrl: `https://payinn.com.au`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",

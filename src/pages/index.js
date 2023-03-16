@@ -9,8 +9,10 @@ const Homepage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Seo
-          title="Building Inspection Reports"
-          description="Building Inspection Report Made Easy, Best for vehicle inspection report, rental inspection checklist, house inspection checklist and inspection report template. Try it FREE!"
+          title={data.wpPage.acfSeoData?.seoTitle}
+          description={data.wpPage.acfSeoData?.seoDescription}
+          image={data.wpPage.acfSeoData.socialThumbnail?.sourceUrl}
+          url={data.wpPage.slug}
         />
         <PageSection data={data} />
       </Layout>
@@ -23,6 +25,14 @@ export default Homepage
 export const query = graphql`
   {
     wpPage(slug: { eq: "homepage" }) {
+      slug
+      acfSeoData {
+        seoTitle
+        seoDescription
+        socialThumbnail {
+          sourceUrl
+        }
+      }
       acfPageSections {
         sectionContent {
           ... on WpPage_Acfpagesections_SectionContent_BannerSection {

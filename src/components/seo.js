@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title }) => {
+const Seo = ({ description, lang, meta, title, image, url }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,21 +18,23 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
     `
-  );
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+  const pageUrl = site.siteMetadata.siteUrl + `/${url}`
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={title ? title : null}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -52,8 +54,20 @@ const Seo = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `og:url`,
+          content: pageUrl,
+        },
+        {
+          name: `og:site_name`,
+          content: defaultTitle,
+        },
+        {
+          name: `og:image`,
+          content: image,
         },
         {
           name: `twitter:creator`,
@@ -69,20 +83,20 @@ const Seo = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     />
-  );
-};
+  )
+}
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-};
+}
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-};
+}
 
-export default Seo;
+export default Seo
