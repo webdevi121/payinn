@@ -5,19 +5,26 @@ import Layout from "components/layout"
 export default function ContactUs() {
   return (
     <Layout>
-      <div className="py-20">
-        <div className="theme-container">
+      <div className="relative py-20">
+        <div className="absolute top-0 left-0 h-full w-full">
+          <img
+            src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-earth-2.jpg"
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="theme-container relative text-white">
           <div className="grid grid-cols-2 gap-20">
             <div>
               <Iframe
                 src="https://admin.payinn.infusion121.com/contact-us/"
                 width="100%"
-                height="750"
+                height="800"
                 title="contact form"
               />
             </div>
             <div className="layout">
-              <h1 className="mb-3 text-3xl font-bold">Get In Touch</h1>
+              <h1 className="mb-3 text-4xl font-bold">Get In Touch</h1>
               <p>
                 If you are ready to start saving your business the high cost of
                 accepting card payments, contact us and a Payment Processing Fee

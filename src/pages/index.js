@@ -33,13 +33,13 @@ export const query = graphql`
               url
             }
             bannerThumbnail {
-              gatsbyImage(quality: 100, width: 580, placeholder: NONE)
+              gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
             }
             bannerFullWidthBackground {
               gatsbyImage(
                 quality: 100
                 height: 500
-                placeholder: NONE
+                placeholder: BLURRED
                 layout: FULL_WIDTH
               )
             }
@@ -48,7 +48,7 @@ export const query = graphql`
             rightContent
             sectionTitle
             leftImage {
-              gatsbyImage(quality: 100, placeholder: NONE, height: 557)
+              gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
             }
             buttonLabel
             buttonLink {
@@ -59,7 +59,7 @@ export const query = graphql`
             leftContent
             sectionTitle2
             rightImage {
-              gatsbyImage(quality: 100, placeholder: NONE, height: 557)
+              gatsbyImage(quality: 100, placeholder: BLURRED, height: 557)
             }
             buttonLabel2
             buttonLink2 {
@@ -84,14 +84,14 @@ export const query = graphql`
                   width: 500
                   quality: 100
                   height: 500
-                  placeholder: NONE
+                  placeholder: BLURRED
                 )
               }
               graphRepeater {
                 graphValue
                 smallText
                 imageGraph {
-                  gatsbyImage(width: 55, placeholder: NONE, height: 30)
+                  gatsbyImage(width: 55, placeholder: BLURRED, height: 30)
                 }
               }
             }
@@ -100,13 +100,13 @@ export const query = graphql`
             aboutContent
             aboutHeadingTitle
             aboutUsThumbnail {
-              gatsbyImage(width: 357, height: 357, placeholder: NONE)
+              gatsbyImage(width: 357, height: 357, placeholder: BLURRED)
             }
           }
           ... on WpPage_Acfpagesections_SectionContent_PaymentGateways {
             paymentLogosRepeater {
               paymentLogo {
-                gatsbyImage(placeholder: NONE, height: 60, layout: FIXED)
+                gatsbyImage(placeholder: BLURRED, height: 60, layout: FIXED)
               }
             }
           }
