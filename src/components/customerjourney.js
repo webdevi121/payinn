@@ -34,7 +34,7 @@ const CustomerJourney = props => {
                           className="dot relative"
                           style={{ color: `var(--accent-color-${index})` }}
                         >
-                          <span className="ping inline-flex animate-ping"></span>
+                          <span className="ping inline-flex"></span>
                           <span className="dot-title">
                             <h4 className="font-bold">{item.stageTitle}</h4>
                           </span>
