@@ -12,7 +12,7 @@ const Pages = ({ data }) => {
           title={data.wpPage.acfSeoData?.seoTitle}
           description={data.wpPage.acfSeoData?.seoDescription}
           image={data.wpPage.acfSeoData.socialThumbnail?.sourceUrl}
-          url={data.wpPage.slug}
+          uri={data.wpPage.uri}
         />
         <PageSection data={data} />
       </Layout>
@@ -25,7 +25,7 @@ export default Pages
 export const query = graphql`
   query ($slug: String!) {
     wpPage(slug: { eq: $slug }) {
-      slug
+      uri
       acfSeoData {
         seoTitle
         seoDescription
