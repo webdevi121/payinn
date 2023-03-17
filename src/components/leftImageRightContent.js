@@ -5,11 +5,11 @@ import Cta from "./cta"
 const LeftImageRightContent = props => {
   return (
     <React.Fragment>
-      <div className="min-h-[50vh] py-20">
+      <div className="min-h-[50vh] overflow-hidden py-20">
         <div className="theme-container relative">
           <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
-          <div className="relative grid grid-cols-2 items-center gap-10">
-            <div className="pr-14">
+          <div className="relative grid grid-flow-row items-center gap-10 lg:grid-flow-col xl:grid-cols-2">
+            <div className="xl:pr-14">
               <GatsbyImage image={props.image} alt="Illustration" />
             </div>
             <div className="layout">

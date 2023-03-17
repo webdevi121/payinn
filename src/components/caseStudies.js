@@ -15,7 +15,7 @@ const CaseStudies = props => {
             Case Studies
           </h2>
           {props.layout ? (
-            <div className="space-y-10">
+            <div className="space-y-24">
               {props.list?.map((item, index) => (
                 <div
                   key={index}
@@ -48,14 +48,16 @@ const CaseStudies = props => {
                                 />
                               </div>
                             </div>
-                            <div className="text-sm">{item.smallText}</div>
+                            <div className="text-xs xl:text-sm">
+                              {item.smallText}
+                            </div>
                           </div>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-5 text-center">
-                    <div className="h-[500px] w-[500px] opacity-50">
+                  <div className="hidden space-y-5 text-center lg:block">
+                    <div className="h-[auto] opacity-50 lg:w-[350px] xl:h-[500px] xl:w-[500px]">
                       <GatsbyImage
                         image={getImage(item.caseStudiesThumbnail)}
                         alt="Illustration"
@@ -108,7 +110,7 @@ const CaseStudies = props => {
                 >
                   {props.list?.map((item, index) => (
                     <SwiperSlide key={index}>
-                      <div className="flex space-x-20">
+                      <div className="grid grid-flow-col gap-10 xl:gap-20">
                         <div className="layout">
                           <h3 className="mb-10 text-3xl font-bold text-white">
                             {item.caseStudiesTitle}
@@ -136,7 +138,7 @@ const CaseStudies = props => {
                                       />
                                     </div>
                                   </div>
-                                  <div className="text-sm">
+                                  <div className="text-xs xl:text-sm">
                                     {item.smallText}
                                   </div>
                                 </div>
@@ -144,8 +146,8 @@ const CaseStudies = props => {
                             </div>
                           </div>
                         </div>
-                        <div className="space-y-5 text-center">
-                          <div className="h-[500px] w-[500px] opacity-50">
+                        <div className="hidden space-y-5 text-center lg:block">
+                          <div className="h-[auto] opacity-50 lg:w-[350px] xl:h-[500px] xl:w-[500px]">
                             <GatsbyImage
                               image={getImage(item.caseStudiesThumbnail)}
                               alt="Illustration"
