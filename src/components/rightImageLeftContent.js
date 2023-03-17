@@ -18,7 +18,7 @@ const RightImageLeftContent = props => {
                 </div>
               ) : null}
             </div>
-            <div className="w-full max-w-md flex-none lg:order-2 xl:flex xl:max-w-full xl:pl-14">
+            <div className="m-auto w-full max-w-[15rem] flex-none md:max-w-md lg:order-2 xl:flex xl:max-w-full xl:pl-14">
               <GatsbyImage image={props.image} alt="Illustration" />
             </div>
           </div>

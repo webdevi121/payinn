@@ -80,35 +80,25 @@ body {
     direction: ltr;
   }
   .jc-wrap {
-    display: flex;
-    padding: 0;
-    min-height: 490px;
+    @apply min-h-[490px] space-y-10 p-0 pt-[10px] sm:flex sm:space-y-0;
     justify-content: flex-end;
     .journey-item {
-      margin-left: -140px;
-      display: flex;
-      width: 365px;
-      flex: 0 0 auto;
-      height: 253px;
+      @apply ml-[17px] flex flex-col items-start sm:ml-[-158px] sm:h-[253px] sm:w-[270px] lg:ml-[-140px] lg:w-[300px] xl:w-[365px];
       align-self: flex-end;
-      flex-direction: column;
-      justify-content: flex-start;
       &:nth-child(even) {
-        align-self: flex-start;
-        flex-direction: column-reverse;
+        @apply sm:flex-col-reverse sm:self-start;
         .roadmap-content {
-          padding: 0 0 100px 17px;
+          @apply pt-0 pr-0 sm:pb-[100px] sm:pl-[17px];
         }
         .dot {
-          top: auto;
-          bottom: 0;
+          @apply sm:bottom-0 sm:top-[auto];
           .dot-title {
-            @apply top-[40px];
+            @apply sm:top-[40px];
           }
         }
       }
       .content {
-        @apply text-white;
+        @apply pt-[30px] pl-[10px] text-white sm:pt-0 sm:pl-0;
         h2 {
           @apply mb-3 font-bold;
         }
@@ -127,10 +117,7 @@ body {
       letter-spacing: 0.1em;
     }
     .roadmap-content {
-      position: relative;
-      margin-left: 57px;
-      padding-left: 17px;
-      padding-top: 110px;
+      @apply relative pl-[17px] sm:ml-[57px] sm:pt-[110px];
       &:before {
         content: "";
         position: absolute;
@@ -164,7 +151,7 @@ body {
           right: 0;
         }
         .dot-title {
-          @apply absolute -left-[105px] -top-[40px] m-auto min-w-[230px] text-center;
+          @apply absolute top-[-5px] left-[35px] m-auto min-w-[230px] sm:-left-[105px] sm:-top-[40px] sm:text-center;
         }
       }
       .title {

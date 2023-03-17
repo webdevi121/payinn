@@ -42,7 +42,7 @@ const Footer = () => {
       <footer>
         <div className="bg-theme-secondary py-20 text-sm text-white">
           <div className="theme-container">
-            <div className="grid grid-cols-3 space-x-7 border-t border-white/10 py-10">
+            <div className="grid gap-7 border-t border-white/10 py-10 md:grid-cols-3">
               <div>
                 <div className="mb-5">
                   <Link to={`/`}>
@@ -116,11 +116,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center border-t border-white/10 py-5">
-              <div>
+            <div className="grid items-center space-y-3 border-t border-white/10 py-5 md:grid-flow-col md:space-y-0">
+              <div className="text-center md:text-left">
                 Copyright ©{currentDate} {siteName}. All rights reserved.
               </div>
-              <div className="ml-auto">
+              <div className="mr-auto ml-auto md:mr-0">
                 <Link to="https://infusion121.com" target="_blank">
                   <img
                     src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/i121-logo.png"

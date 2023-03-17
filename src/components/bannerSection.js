@@ -5,7 +5,7 @@ import Cta from "./cta"
 const BannerSection = props => {
   return (
     <React.Fragment>
-      <div className="relative flex min-h-[80vh] items-center bg-theme-secondary text-white">
+      <div className="relative flex min-h-[80vh] items-center bg-theme-secondary pb-10 text-white lg:pb-0">
         {props.backgroundImage ? (
           <div className="absolute bottom-0 left-0 w-full opacity-40">
             <GatsbyImage image={props.backgroundImage} alt="Illustration" />
@@ -13,7 +13,7 @@ const BannerSection = props => {
         ) : null}
         <div className="theme-container relative">
           <div className="grid items-center gap-10 space-y-7 text-left lg:grid-cols-2">
-            <div className="layout order-2 space-y-7 md:order-1">
+            <div className="layout order-2 space-y-7 lg:order-1">
               <h2 className="mb-3 text-5xl font-bold xl:text-7xl">
                 {props.title}
               </h2>
@@ -23,7 +23,7 @@ const BannerSection = props => {
               </div>
             </div>
             {props.thumbnail ? (
-              <div className="ml-auto overflow-hidden rounded-lg">
+              <div className="m-auto ml-auto max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2">
                 <GatsbyImage image={props.thumbnail} alt="Illustration" />
               </div>
             ) : null}
