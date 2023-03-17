@@ -11,7 +11,7 @@ const siteUrl = process.env.URL || `https://payinn.com.au`
 module.exports = {
   //configuration object
   siteMetadata: {
-    title: `PayInn - Payments Innovations`,
+    title: `PayInn`,
     description: `Payments Innovations specialises in helping businesses large and Institutional enterprises discover the benefits of Australia’s rapidly changing Payments Processing Landscape.`,
     author: `@gatsbyjs`,
     siteUrl: `https://payinn.com.au`,

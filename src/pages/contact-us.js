@@ -1,11 +1,19 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Seo from "components/seo"
 import Iframe from "react-iframe"
 import Layout from "components/layout"
 
-export default function ContactUs() {
+export default function ContactUs({ data }) {
   return (
     <Layout>
-      <div className="relative py-20">
+      <Seo
+        title={data.wpPage.acfSeoData?.seoTitle}
+        description={data.wpPage.acfSeoData?.seoDescription}
+        image={data.wpPage.acfSeoData.socialThumbnail?.sourceUrl}
+        uri={data.wpPage.uri}
+      />
+      <div className="relative py-10 lg:py-20">
         <div className="absolute top-0 left-0 h-full w-full">
           <img
             src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-earth-2.jpg"
@@ -41,3 +49,18 @@ export default function ContactUs() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    wpPage(slug: { eq: "contact-us" }) {
+      uri
+      acfSeoData {
+        seoTitle
+        seoDescription
+        socialThumbnail {
+          sourceUrl
+        }
+      }
+    }
+  }
+`

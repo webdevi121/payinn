@@ -1,7 +1,42 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      wpMenu(locations: { eq: PRIMARY }) {
+        menuItems {
+          nodes {
+            label
+            uri
+            id
+          }
+        }
+      }
+      wp {
+        acfOptionsGlobalOptions {
+          acfOptions {
+            footerAddress
+            shortDescription
+            footerEmail
+          }
+        }
+      }
+      file {
+        ctime(formatString: "Y")
+      }
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  const options = data.wp.acfOptionsGlobalOptions.acfOptions
+  const currentDate = data.file.ctime
+  const siteName = data.site.siteMetadata.title
+
   return (
     <React.Fragment>
       <footer>
@@ -57,33 +92,36 @@ const Footer = () => {
                     </svg>
                   </Link>
                 </div>
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut
-                </div>
+                <div>{options.shortDescription}</div>
               </div>
               <div>
                 <h2 className="mb-3 text-lg font-bold">Contact Us</h2>
-                <div>
-                  <div>202 Helga Springs Rd, Crawford, TN 38554</div>
-                  <div>000 info@payinn.com</div>
+                <div className="space-y-3">
+                  <div>{options.footerAddress}</div>
+                  <div>
+                    <a href={`mailto:${options.footerEmail}`}>
+                      {options.footerEmail}
+                    </a>
+                  </div>
                 </div>
               </div>
               <div>
                 <h2 className="mb-3 text-lg font-bold">Links</h2>
-                <div className="flex flex-col">
-                  <Link to="/">Home</Link>
-                  <Link to="/">Least Cost Routing</Link>
-                  <Link to="/">Crypto to Fiat</Link>
-                  <Link to="/">Contact Us</Link>
+                <div className="flex flex-col space-y-2">
+                  {data.wpMenu.menuItems.nodes.map(item => (
+                    <Link key={item.id} to={item.uri}>
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
             <div className="flex items-center border-t border-white/10 py-5">
-              <div>Copyright ©2023 PayInn. All rights reserved.</div>
+              <div>
+                Copyright ©{currentDate} {siteName}. All rights reserved.
+              </div>
               <div className="ml-auto">
-                <Link to="/">
+                <Link to="https://infusion121.com" target="_blank">
                   <img
                     src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/i121-logo.png"
                     alt=""
