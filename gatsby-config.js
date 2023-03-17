@@ -65,8 +65,8 @@ module.exports = {
         short_name: "Gatsby",
         start_url: "/",
         // These can be imported once ESM support lands
-        background_color: "#ffffff",
-        theme_color: "#004ca3",
+        background_color: "#02111d",
+        theme_color: "#02111d",
         icon: "src/images/icon.png",
       },
     },
