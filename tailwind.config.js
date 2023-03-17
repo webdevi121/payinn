@@ -30,7 +30,10 @@ module.exports = {
             DEFAULT: "var(--primary-color)",
           },
           secondary: {
-            DEFAULT: "#02111D",
+            DEFAULT: "var(--secondary-color)",
+          },
+          light: {
+            DEFAULT: "var(--light-color)",
           },
           darkGray: "#666666",
           lightGray: "#fafafa",
