@@ -14,8 +14,8 @@ export default function ContactUs() {
           />
         </div>
         <div className="theme-container relative text-white">
-          <div className="grid grid-cols-2 gap-20">
-            <div>
+          <div className="grid grid-flow-row gap-5 lg:grid-cols-2 lg:gap-20">
+            <div className="order-2 lg:order-1">
               <Iframe
                 src="https://admin.payinn.infusion121.com/contact-us/"
                 width="100%"
@@ -23,7 +23,7 @@ export default function ContactUs() {
                 title="contact form"
               />
             </div>
-            <div className="layout">
+            <div className="layout lg:order-2">
               <h1 className="mb-3 text-4xl font-bold">Get In Touch</h1>
               <p>
                 If you are ready to start saving your business the high cost of

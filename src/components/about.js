@@ -5,7 +5,7 @@ import Cta from "./cta"
 const AboutDavid = props => {
   return (
     <React.Fragment>
-      <div className="relative min-h-[50vh] overflow-hidden bg-transparent py-20">
+      <div className="relative min-h-[50vh] overflow-x-clip bg-transparent py-20">
         <div className="theme-container relative">
           <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
           <div className="flex flex-col items-center space-y-10 space-y-reverse lg:flex-row lg:space-x-14 xl:space-x-52">

@@ -15,7 +15,7 @@ const Faq = props => {
           <h2 className="mb-10 text-4xl font-bold text-theme-primary">
             Common Enquiries
           </h2>
-          <Accordion allowZeroExpanded className="grid grid-cols-2 gap-3">
+          <Accordion allowZeroExpanded className="grid gap-3 xl:grid-cols-2">
             {props.list.map((item, index) => (
               <AccordionItem key={index}>
                 <AccordionItemHeading>

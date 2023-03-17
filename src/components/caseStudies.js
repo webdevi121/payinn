@@ -158,7 +158,6 @@ const CaseStudies = props => {
                       </div>
                     </SwiperSlide>
                   ))}
-                  <div className="swiper-pagination"></div>
                 </Swiper>
               </div>
             </>
