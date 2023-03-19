@@ -13,7 +13,7 @@ module.exports = {
   siteMetadata: {
     title: `PayInn`,
     description: `Payments Innovations specialises in helping businesses large and Institutional enterprises discover the benefits of Australia’s rapidly changing Payments Processing Landscape.`,
-    author: `@gatsbyjs`,
+    author: `@payinn`,
     siteUrl: `https://payinn.com.au`,
   },
   plugins: [
@@ -61,8 +61,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter WordPress Homepage",
-        short_name: "Gatsby",
+        name: "Payments Innovations",
+        short_name: "PayInn",
         start_url: "/",
         // These can be imported once ESM support lands
         background_color: "#02111d",

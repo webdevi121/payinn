@@ -69,6 +69,9 @@ const Pages = props => {
                   title={node.aboutHeadingTitle}
                   content={node.aboutContent}
                   image={getImage(node.aboutUsThumbnail.gatsbyImage)}
+                  name={node.ceoName}
+                  position={node.companyPosition}
+                  linkedinUrl={node.linkedinUrl}
                 />
               ) : null}
               {node.caseStudiesRepeater ? (

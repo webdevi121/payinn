@@ -10,7 +10,9 @@ const RightImageLeftContent = props => {
           <div className="absolute -top-20 left-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[150px]"></div>
           <div className="relative grid grid-flow-row items-center gap-10 lg:grid-flow-col xl:grid-cols-2">
             <div className="layout order-2 lg:order-1">
-              <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>
+              <h2 className="mb-5 text-3xl font-bold md:text-4xl">
+                {props.title}
+              </h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
               {props.buttonLabel ? (
                 <div className="mt-10">

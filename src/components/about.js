@@ -8,7 +8,7 @@ const AboutDavid = props => {
       <div className="relative min-h-[50vh] overflow-x-clip bg-transparent bg-theme-light py-20">
         <div className="theme-container relative">
           <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
-          <div className="flex flex-col items-center space-y-10 space-y-reverse lg:flex-row lg:space-x-14 xl:space-x-52">
+          <div className="relative flex flex-col items-center space-y-10 space-y-reverse lg:flex-row lg:space-x-14 xl:space-x-52">
             <div className="layout order-2 lg:order-1">
               <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>
               <div
@@ -23,11 +23,11 @@ const AboutDavid = props => {
               </div>
               <div className="space-y-5">
                 <div>
-                  <h3 className="text-2xl font-medium">David Lorem Ipsum</h3>
-                  <div>Founder & CO</div>
+                  <h3 className="text-2xl font-medium">{props.name}</h3>
+                  <div>{props.position}</div>
                 </div>
                 <div>
-                  <a href="https://au.linkedin.com/">
+                  <a href={props.linkedinUrl}>
                     <img
                       src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/linkedin-logo.png"
                       alt=""

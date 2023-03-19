@@ -13,7 +13,9 @@ const LeftImageRightContent = props => {
               <GatsbyImage image={props.image} alt="Illustration" />
             </div>
             <div className="layout">
-              <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>
+              <h2 className="mb-5 text-3xl font-bold md:text-4xl">
+                {props.title}
+              </h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
               {props.buttonLabel ? (
                 <div className="mt-10">

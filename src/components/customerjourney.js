@@ -13,7 +13,7 @@ const CustomerJourney = props => {
         </div>
         <div className="theme-container relative">
           <div className="mb-20 space-y-3 text-center">
-            <h2 className="text-4xl font-bold text-theme-primary">
+            <h2 className="text-3xl font-bold text-theme-primary md:text-4xl">
               {props.title}
             </h2>
             <div className="m-auto max-w-4xl font-medium text-white">

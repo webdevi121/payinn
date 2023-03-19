@@ -14,7 +14,7 @@ const BannerSection = props => {
         <div className="theme-container relative">
           <div className="grid items-center gap-10 space-y-7 text-left lg:grid-cols-2">
             <div className="layout order-2 space-y-7 lg:order-1">
-              <h2 className="mb-3 text-5xl font-bold xl:text-7xl">
+              <h2 className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl">
                 {props.title}
               </h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
