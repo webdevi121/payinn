@@ -14,11 +14,29 @@ const BannerSection = props => {
         <div className="theme-container relative">
           <div className="grid items-center gap-10 space-y-7 text-left lg:grid-cols-2">
             <div className="layout order-2 space-y-7 lg:order-1">
-              <h2 className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl">
+              <h2
+                data-sal="slide-up"
+                data-sal-delay="100"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
+                className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl"
+              >
                 {props.title}
               </h2>
-              <div dangerouslySetInnerHTML={{ __html: props.content }} />
-              <div className="mt-10">
+              <div
+                data-sal="slide-up"
+                data-sal-delay="200"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
+                dangerouslySetInnerHTML={{ __html: props.content }}
+              />
+              <div
+                data-sal="slide-up"
+                data-sal-delay="400"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
+                className="mt-10"
+              >
                 <Cta />
               </div>
             </div>
