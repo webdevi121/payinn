@@ -17,7 +17,13 @@ const CustomerJourney = props => {
             />
           </div>
         ) : null}
-        <div className="theme-container relative">
+        <div
+          data-sal="slide-up"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          className="theme-container relative"
+        >
           <div className="mb-20 space-y-3 text-center">
             <h2
               className={`text-3xl font-bold md:text-4xl ${

@@ -23,7 +23,13 @@ const BannerSection = props => {
               </div>
             </div>
             {props.thumbnail ? (
-              <div className="m-auto ml-auto max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2">
+              <div
+                data-sal="slide-up"
+                data-sal-delay="100"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
+                className="m-auto ml-auto max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2"
+              >
                 <GatsbyImage image={props.thumbnail} alt="Illustration" />
               </div>
             ) : null}
