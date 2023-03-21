@@ -11,7 +11,9 @@ const RightImageLeftContent = props => {
           <div className="relative grid grid-flow-row items-center gap-10 lg:grid-flow-col xl:grid-cols-2">
             <div className="layout order-2 lg:order-1">
               <h2 className="mb-5 text-3xl font-bold md:text-4xl">
-                {props.title}
+                <span className="after:flex after:w-[40px] after:border-[2px] after:border-b after:border-theme-primary">
+                  {props.title}
+                </span>
               </h2>
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
               {props.buttonLabel ? (

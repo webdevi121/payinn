@@ -10,7 +10,11 @@ const AboutDavid = props => {
           <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
           <div className="relative flex flex-col items-center space-y-10 space-y-reverse lg:flex-row lg:space-x-14 xl:space-x-52">
             <div className="layout order-2 lg:order-1">
-              <h2 className="mb-5 text-4xl font-bold">{props.title}</h2>
+              <h2 className="mb-5 text-4xl font-bold">
+                <span className="after:flex after:w-[40px] after:border-[2px] after:border-b after:border-theme-primary">
+                  {props.title}
+                </span>
+              </h2>
               <div
                 dangerouslySetInnerHTML={{
                   __html: props.content,

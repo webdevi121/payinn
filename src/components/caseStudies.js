@@ -12,7 +12,9 @@ const CaseStudies = props => {
       <div className="relative min-h-[50vh] bg-theme-secondary pt-20 text-white">
         <div className="theme-container relative">
           <h2 className="mb-20 text-4xl font-bold text-theme-primary">
-            Case Studies
+            <span className="after:flex after:w-[40px] after:border-[2px] after:border-b after:border-theme-primary">
+              Case Studies
+            </span>
           </h2>
           {props.layout ? (
             <div className="space-y-24">

@@ -13,7 +13,9 @@ const Faq = props => {
       <div className="bg-theme-secondary py-20 text-white">
         <div className="theme-container relative">
           <h2 className="mb-10 text-4xl font-bold text-theme-primary">
-            Common Enquiries
+            <span className="after:flex after:w-[40px] after:border-[2px] after:border-b after:border-theme-primary">
+              Common Enquiries
+            </span>
           </h2>
           <Accordion allowZeroExpanded className="grid gap-3 xl:grid-cols-2">
             {props.list.map((item, index) => (

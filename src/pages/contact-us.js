@@ -32,7 +32,11 @@ export default function ContactUs({ data }) {
               />
             </div>
             <div className="layout lg:order-2">
-              <h1 className="mb-3 text-4xl font-bold">Get In Touch</h1>
+              <h1 className="mb-10 text-4xl font-bold text-theme-primary">
+                <span className="after:flex after:w-[40px] after:border-[2px] after:border-b after:border-theme-primary">
+                  Get In Touch
+                </span>
+              </h1>
               <p>
                 If you are ready to start saving your business the high cost of
                 accepting card payments, contact us and a Payment Processing Fee
