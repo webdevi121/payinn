@@ -20,6 +20,10 @@ const CaseStudies = props => {
             <div className="space-y-24">
               {props.list?.map((item, index) => (
                 <div
+                  data-sal="slide-up"
+                  data-sal-delay="100"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
                   key={index}
                   className="flex space-x-20 even:flex-row-reverse even:space-x-reverse"
                 >
@@ -80,7 +84,13 @@ const CaseStudies = props => {
                   <ChevronRightIcon className="inline-block h-8 w-8 rounded-md bg-theme-primary stroke-1" />
                 </button>
               </div>
-              <div className="">
+              <div
+                data-sal="slide-up"
+                data-sal-delay="100"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
+                className=""
+              >
                 <Swiper
                   modules={[Navigation, Pagination, Scrollbar, A11y]}
                   spaceBetween={50}

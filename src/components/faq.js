@@ -19,7 +19,13 @@ const Faq = props => {
           </h2>
           <Accordion allowZeroExpanded className="grid gap-3 xl:grid-cols-2">
             {props.list.map((item, index) => (
-              <AccordionItem key={index}>
+              <AccordionItem
+                data-sal="slide-up"
+                data-sal-delay={`${index + 2}00`}
+                data-sal-easing="ease"
+                data-sal-duration="2000"
+                key={index}
+              >
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     {item.questionField}

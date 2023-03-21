@@ -6,7 +6,13 @@ const AboutDavid = props => {
   return (
     <React.Fragment>
       <div className="relative min-h-[50vh] overflow-x-clip bg-transparent bg-theme-light py-20">
-        <div className="theme-container relative">
+        <div
+          data-sal="slide-up"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+          data-sal-duration="1000"
+          className="theme-container relative"
+        >
           <div className="absolute -top-16 right-0 h-[45rem] w-[35rem] bg-theme-primary opacity-20 blur-[120px]"></div>
           <div className="relative flex flex-col items-center space-y-10 space-y-reverse lg:flex-row lg:space-x-14 xl:space-x-52">
             <div className="layout order-2 lg:order-1">
