@@ -3,25 +3,39 @@ import React from "react"
 const CustomerJourney = props => {
   return (
     <React.Fragment>
-      <div className="relative min-h-[50vh] bg-theme-secondary py-20">
-        <div className="absolute top-0 left-0 h-full w-full">
-          <img
-            src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-matrix.jpg"
-            alt=""
-            className="h-full w-full object-cover object-bottom opacity-10"
-          />
-        </div>
+      <div
+        className={`relative py-20 ${
+          props.layout ? "min-h-[50vh] bg-theme-secondary" : "bg-theme-light"
+        }`}
+      >
+        {props.layout ? (
+          <div className="absolute top-0 left-0 h-full w-full">
+            <img
+              src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-matrix.jpg"
+              alt=""
+              className="h-full w-full object-cover object-bottom opacity-10"
+            />
+          </div>
+        ) : null}
         <div className="theme-container relative">
           <div className="mb-20 space-y-3 text-center">
-            <h2 className="text-3xl font-bold text-theme-primary md:text-4xl">
+            <h2
+              className={`text-3xl font-bold md:text-4xl ${
+                props.layout ? "text-theme-primary" : "text-theme-secondary"
+              }`}
+            >
               {props.title}
             </h2>
-            <div className="m-auto max-w-4xl font-medium text-white">
-              {props.content}
-            </div>
+            {props.content ? (
+              <div className="m-auto max-w-4xl font-medium text-white">
+                {props.content}
+              </div>
+            ) : null}
           </div>
           <div>
-            <div className="journey-container">
+            <div
+              className={`journey-container ${props.layout ? "dark" : "light"}`}
+            >
               <div className="jc-scroll-box">
                 <div className="jc-wrap">
                   {props.list?.map((item, index) => (

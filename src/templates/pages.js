@@ -78,6 +78,7 @@ export const query = graphql`
           }
           ... on WpPage_Acfpagesections_SectionContent_CustomerJourney {
             journeySectionTitle
+            journeyLayout
             sectionSubTextJourney
             journeyRepeater {
               stageTitle
@@ -109,6 +110,9 @@ export const query = graphql`
           ... on WpPage_Acfpagesections_SectionContent_AboutUs {
             aboutContent
             aboutHeadingTitle
+            ceoName
+            companyPosition
+            linkedinUrl
             aboutUsThumbnail {
               gatsbyImage(width: 357, height: 357, placeholder: BLURRED)
             }

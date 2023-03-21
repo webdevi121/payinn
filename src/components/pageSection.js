@@ -62,6 +62,7 @@ const Pages = props => {
                   title={node.journeySectionTitle}
                   content={node.sectionSubTextJourney}
                   list={node.journeyRepeater}
+                  layout={node.journeyLayout}
                 />
               ) : null}
               {node.aboutHeadingTitle ? (
