@@ -21,6 +21,7 @@
 @import "components/video.scss";
 @import "utilities/spacing.scss";
 @import "utilities/post-reset.scss";
+@import "utilities/font-face.scss";
 @import "styles/components/faq.scss";
 
 @layer base {
@@ -35,7 +36,7 @@
 }
 
 body {
-  @apply font-montserrat;
+  @apply font-heebo;
 }
 
 .layout {

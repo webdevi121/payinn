@@ -18,7 +18,7 @@ module.exports = {
       // => @media (min-width: 1200px) { ... }
     },
     fontFamily: {
-      montserrat: ["Heebo", "sans-serif"],
+      heebo: ["Heebo", "sans-serif"],
     },
     container: {
       center: true,

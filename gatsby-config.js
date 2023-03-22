@@ -70,13 +70,13 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Heebo:300,400,500`],
-        display: "swap",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Heebo:300,400,500`],
+    //     display: "swap",
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-root-import",
       options: {
