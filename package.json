@@ -18,7 +18,6 @@
     "@heroicons/react": "^1.0.6",
     "gatsby": "^4.16.0",
     "gatsby-plugin-exclude": "^1.0.2",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.16.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.16.0",
