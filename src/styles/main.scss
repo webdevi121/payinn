@@ -186,3 +186,11 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  [data-sal] {
+    opacity: 1 !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
