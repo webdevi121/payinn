@@ -1,9 +1,9 @@
 {
-  "name": "sir",
+  "name": "PayInn",
   "version": "1.0.0",
   "private": true,
-  "description": "sir",
-  "author": "sarniel",
+  "description": "PayInn",
+  "author": "infusion121.com.au",
   "keywords": [
     "gatsby"
   ],
