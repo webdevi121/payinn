@@ -85,9 +85,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url:
-          process.env.WPGRAPHQL_URL ||
-          `https://admin.payinn.infusion121.com/graphql`,
+        url: process.env.WPGRAPHQL_URL || `https://admin.payinn.com.au/graphql`,
         schema: {
           //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
           typePrefix: `Wp`,

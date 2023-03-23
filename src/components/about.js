@@ -39,7 +39,7 @@ const AboutDavid = props => {
                 <div>
                   <a href={props.linkedinUrl}>
                     <img
-                      src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/linkedin-logo.png"
+                      src="https://admin.payinn.com.au/wp-content/uploads/2023/03/linkedin-logo.png"
                       alt=""
                       width="82"
                       className="inline-block"
