@@ -111,19 +111,5 @@ module.exports = {
       resolve: "gatsby-plugin-exclude",
       options: { paths: ["/contact-iframe"] },
     },
-    {
-      resolve: "gatsby-plugin-mailchimp",
-      options: {
-        endpoint:
-          "https://infusion121.us12.list-manage.com/subscribe/post?u=6f9216b04622ed9de64773de7&amp;id=be62cc7c06&amp;f_id=001268e0f0", // string; add your MC list endpoint here; see instructions below
-        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
-      },
-    },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [`gatsby-remark-responsive-iframe`],
-    //   },
-    // },
   ],
 }

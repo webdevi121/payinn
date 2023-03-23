@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Seo from "components/seo"
 import Layout from "components/layout"
-import Mailchimp from "components/mailchimp"
 
 const DetailPage = ({ data }) => {
   const item = data.wpPost
@@ -34,9 +33,6 @@ const DetailPage = ({ data }) => {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="broder-t mt-10 pt-5">
-            <Mailchimp />
           </div>
         </div>
       </Layout>
