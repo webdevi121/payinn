@@ -10,6 +10,7 @@ const siteUrl = process.env.URL || `https://payinn.com.au`
 
 module.exports = {
   //configuration object
+  trailingSlash: `always`,
   siteMetadata: {
     title: `PayInn`,
     description: `Payments Innovations specialises in helping businesses large and Institutional enterprises discover the benefits of Australia’s rapidly changing Payments Processing Landscape.`,
@@ -86,24 +87,6 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: process.env.WPGRAPHQL_URL || `https://admin.payinn.com.au/graphql`,
-        schema: {
-          //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
-          typePrefix: `Wp`,
-        },
-        develop: {
-          //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
-          hardCacheMediaFiles: true,
-        },
-        type: {
-          Post: {
-            limit:
-              process.env.NODE_ENV === `development`
-                ? // Lets just pull 50 posts in development to make it easy on ourselves (aka. faster).
-                  50
-                : // and we don't actually need more than 5000 in production for this particular site
-                  5000,
-          },
-        },
       },
     },
     {

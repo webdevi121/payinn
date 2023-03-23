@@ -1,5 +1,14 @@
-exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  const result2 = await graphql(`
+const path = require(`path`)
+
+// Log out information after a build is done
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info(`Your Gatsby site has been built!`)
+}
+// Create blog pages dynamically
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const blogPostTemplate = path.resolve(`src/templates/pages.js`)
+  const result = await graphql(`
     query {
       allWpPage(filter: { acfPageData: { pageTemplate: { eq: "default" } } }) {
         edges {
@@ -10,21 +19,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }
     }
   `)
-
-  const pageTemplate = require.resolve(`./src/templates/pages.js`)
-
-  // Handle errors
-  if (result2.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-
-  result2.data.allWpPage.edges.forEach(page => {
+  result.data.allWpPage.edges.forEach(edge => {
     createPage({
-      path: page.node.slug,
-      component: pageTemplate,
+      path: `${edge.node.slug}`,
+      component: blogPostTemplate,
       context: {
-        slug: page.node.slug,
+        slug: edge.node.slug,
       },
     })
   })
