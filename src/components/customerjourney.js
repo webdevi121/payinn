@@ -11,7 +11,7 @@ const CustomerJourney = props => {
         {props.layout ? (
           <div className="absolute top-0 left-0 h-full w-full">
             <img
-              src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-matrix.jpg"
+              src="https://admin.payinn.com.au/wp-content/uploads/2023/03/bg-matrix.jpg"
               alt=""
               className="h-full w-full object-cover object-bottom opacity-10"
             />

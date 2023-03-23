@@ -8,7 +8,7 @@ const CtaFooter = props => {
         <div className="theme-container relative flex min-h-[446px] items-center">
           <div className="absolute top-0 left-0 h-full w-full">
             <img
-              src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/currency-icon.png"
+              src="https://admin.payinn.com.au/wp-content/uploads/2023/03/currency-icon.png"
               alt=""
               className="block h-full w-full object-contain"
             />

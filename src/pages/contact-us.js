@@ -16,7 +16,7 @@ export default function ContactUs({ data }) {
       <div className="relative py-10 lg:py-20">
         <div className="absolute top-0 left-0 h-full w-full">
           <img
-            src="https://admin.payinn.infusion121.com/wp-content/uploads/2023/03/bg-earth-2.jpg"
+            src="https://admin.payinn.com.au/wp-content/uploads/2023/03/bg-earth-2.jpg"
             alt=""
             className="h-full w-full object-cover"
           />
@@ -25,7 +25,7 @@ export default function ContactUs({ data }) {
           <div className="grid grid-flow-row gap-5 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1">
               <Iframe
-                src="https://admin.payinn.infusion121.com/contact-us/"
+                src="https://admin.payinn.com.au/contact-us/"
                 width="100%"
                 height="800"
                 title="contact form"
