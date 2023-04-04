@@ -14,7 +14,7 @@ const BannerSection = props => {
         <div className="theme-container relative">
           <div className="grid items-center gap-10 space-y-7 text-left lg:grid-cols-2">
             <div className="layout order-2 space-y-7 lg:order-1">
-              <h2
+              <h1
                 data-sal="slide-up"
                 data-sal-delay="100"
                 data-sal-easing="ease"
@@ -22,7 +22,7 @@ const BannerSection = props => {
                 className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl"
               >
                 {props.title}
-              </h2>
+              </h1>
               <div
                 data-sal="slide-up"
                 data-sal-delay="200"
