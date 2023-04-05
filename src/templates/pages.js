@@ -65,6 +65,11 @@ export const query = graphql`
               url
             }
           }
+          ... on WpPage_Acfpagesections_SectionContent_TwoColumnsContent {
+            twoColumnsLeftContent
+            twoColumnsRightContent
+            twoColumnsSectionTitle
+          }
           ... on WpPage_Acfpagesections_SectionContent_RightImageLeftContent {
             leftContent
             sectionTitle2

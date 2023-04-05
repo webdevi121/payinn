@@ -7,6 +7,7 @@ import CustomerJourney from "./customerjourney"
 import AboutDavid from "./about"
 import CaseStudies from "./caseStudies"
 import PaymentGateWayLogos from "./paymentGatewayLogos"
+import TwoColumns from "./twoColumns"
 import CtaFooter from "./ctaFooter"
 import Faq from "./faq"
 
@@ -73,6 +74,13 @@ const Pages = props => {
                   name={node.ceoName}
                   position={node.companyPosition}
                   linkedinUrl={node.linkedinUrl}
+                />
+              ) : null}
+              {node.twoColumnsSectionTitle ? (
+                <TwoColumns
+                  title={node.twoColumnsSectionTitle}
+                  contentLeft={node.twoColumnsLeftContent}
+                  contentRight={node.twoColumnsRightContent}
                 />
               ) : null}
               {node.caseStudiesRepeater ? (
