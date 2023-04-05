@@ -37,6 +37,7 @@ export const query = graphql`
         sectionContent {
           ... on WpPage_Acfpagesections_SectionContent_BannerSection {
             bannerHeadingTitle
+            animationText
             bannerDescription
             bannerButtonLabel
             bannerButtonLink {

@@ -21,6 +21,7 @@ const Pages = props => {
               {node.bannerHeadingTitle ? (
                 <BannerSection
                   title={node.bannerHeadingTitle}
+                  textAnimate={node.animationText}
                   content={node.bannerDescription}
                   buttonLabel={
                     node.bannerButtonLabel ? node.bannerButtonLabel : null

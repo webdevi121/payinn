@@ -1,5 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+import Typewriter from "typewriter-effect"
 import Cta from "./cta"
 
 const BannerSection = props => {
@@ -22,6 +23,17 @@ const BannerSection = props => {
                 className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl"
               >
                 {props.title}
+                {props.textAnimate ? (
+                  <div className="text-theme-primary">
+                    <Typewriter
+                      options={{
+                        strings: [`${props.textAnimate}`, "Cost Routing"],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </div>
+                ) : null}
               </h1>
               <div
                 data-sal="slide-up"
