@@ -27,7 +27,7 @@ const AboutDavid = props => {
                 }}
               />
             </div>
-            <div className="flex flex-row items-center space-x-10 text-center lg:order-2 lg:flex-col lg:space-y-5 lg:space-x-0">
+            <div className="grid items-center gap-7 text-center sm:grid-flow-col lg:order-2 lg:grid-flow-row">
               <div className="h-[auto] w-[200px] overflow-hidden rounded-full lg:h-[350px] lg:w-[350px]">
                 <GatsbyImage image={props.image} alt="Illustration" />
               </div>

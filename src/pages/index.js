@@ -121,7 +121,8 @@ export const query = graphql`
           ... on WpPage_Acfpagesections_SectionContent_PaymentGateways {
             paymentLogosRepeater {
               paymentLogo {
-                gatsbyImage(placeholder: BLURRED, height: 60, layout: FIXED)
+                publicUrl
+                gatsbyImage(quality: 100, placeholder: BLURRED, height: 60)
               }
             }
           }

@@ -20,7 +20,7 @@ const BannerSection = props => {
                 data-sal-delay="100"
                 data-sal-easing="ease"
                 data-sal-duration="1000"
-                className="mb-3 text-3xl font-bold md:text-5xl xl:text-7xl"
+                className="mb-3 text-5xl font-bold sm:text-7xl lg:text-5xl xl:text-7xl"
               >
                 {props.title}
                 {props.textAnimate ? (
@@ -58,7 +58,7 @@ const BannerSection = props => {
                 data-sal-delay="100"
                 data-sal-easing="ease"
                 data-sal-duration="1000"
-                className="m-auto ml-auto max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2"
+                className="m-auto ml-auto hidden max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2 lg:block"
               >
                 <GatsbyImage image={props.thumbnail} alt="Illustration" />
               </div>
