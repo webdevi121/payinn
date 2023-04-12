@@ -47,10 +47,13 @@ body {
     }
   }
   h3 {
-    @apply mb-4 text-2xl font-semibold;
+    @apply mb-4 text-2xl font-medium;
   }
   p {
     @apply mb-7;
+  }
+  a {
+    @apply font-normal text-theme-primary;
   }
   ul {
     @apply mb-7 space-y-3;
@@ -63,6 +66,9 @@ body {
       padding-left: 45px;
       padding-bottom: 1px;
     }
+  }
+  .static-btn {
+    @apply inline-block rounded-2xl bg-theme-primary px-8 py-3 text-lg font-medium text-white;
   }
 }
 .journey-container {

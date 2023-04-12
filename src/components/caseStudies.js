@@ -41,7 +41,7 @@ const CaseStudies = props => {
                         {item.graphRepeater?.map((item, index) => (
                           <div
                             key={index}
-                            className="flex w-full flex-col items-center rounded-lg bg-white/10 p-3"
+                            className="flex w-full flex-col items-center items-center justify-center space-y-1 rounded-lg bg-white/10 p-3"
                           >
                             <div className="flex space-x-3">
                               <div className="text-3xl font-bold">
@@ -137,7 +137,7 @@ const CaseStudies = props => {
                               {item.graphRepeater?.map((item, index) => (
                                 <div
                                   key={index}
-                                  className="flex w-full flex-col items-center rounded-lg bg-white/10 p-3"
+                                  className="flex w-full flex-col items-center items-center justify-center space-y-1 rounded-lg bg-white/10 p-3"
                                 >
                                   <div className="flex space-x-3">
                                     <div className="text-3xl font-bold">
