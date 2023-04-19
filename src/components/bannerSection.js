@@ -13,7 +13,7 @@ const BannerSection = props => {
           </div>
         ) : null}
         <div className="theme-container relative">
-          <div className="grid items-center gap-10 space-y-7 text-left lg:grid-cols-2">
+          <div className="grid items-center gap-32 space-y-7 text-left lg:grid-flow-col">
             <div className="layout order-2 space-y-7 lg:order-1">
               <h1
                 data-sal="slide-up"
@@ -61,7 +61,7 @@ const BannerSection = props => {
                 data-sal-delay="100"
                 data-sal-easing="ease"
                 data-sal-duration="1000"
-                className="m-auto ml-auto hidden max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2 lg:block"
+                className="m-auto ml-auto hidden max-w-[16rem] overflow-hidden rounded-lg md:max-w-full lg:order-2 lg:flex lg:w-[350px] xl:w-[500px]"
               >
                 <GatsbyImage image={props.thumbnail} alt="Illustration" />
               </div>
