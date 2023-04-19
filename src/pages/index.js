@@ -39,10 +39,7 @@ export const query = graphql`
             bannerHeadingTitle
             bannerDescription
             animationText
-            bannerButtonLabel
-            bannerButtonLink {
-              url
-            }
+            animationTextTwo
             bannerThumbnail {
               gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
             }

@@ -38,11 +38,8 @@ export const query = graphql`
           ... on WpPage_Acfpagesections_SectionContent_BannerSection {
             bannerHeadingTitle
             animationText
+            animationTextTwo
             bannerDescription
-            bannerButtonLabel
-            bannerButtonLink {
-              url
-            }
             bannerThumbnail {
               gatsbyImage(quality: 100, width: 580, placeholder: BLURRED)
             }

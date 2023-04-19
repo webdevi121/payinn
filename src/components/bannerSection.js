@@ -27,7 +27,10 @@ const BannerSection = props => {
                   <div className="text-theme-primary">
                     <Typewriter
                       options={{
-                        strings: [`${props.textAnimate}`, "Cost Routing"],
+                        strings: [
+                          `${props.textAnimate}`,
+                          `${props.animationTextTwo}`,
+                        ],
                         autoStart: true,
                         loop: true,
                       }}

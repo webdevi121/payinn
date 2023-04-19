@@ -22,13 +22,8 @@ const Pages = props => {
                 <BannerSection
                   title={node.bannerHeadingTitle}
                   textAnimate={node.animationText}
+                  animationTextTwo={node.animationTextTwo}
                   content={node.bannerDescription}
-                  buttonLabel={
-                    node.bannerButtonLabel ? node.bannerButtonLabel : null
-                  }
-                  bannerButtonLink={
-                    node.bannerButtonLink ? node.bannerButtonLink.url : null
-                  }
                   thumbnail={getImage(node.bannerThumbnail.gatsbyImage)}
                   backgroundImage={getImage(
                     node.bannerFullWidthBackground.gatsbyImage
