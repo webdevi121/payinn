@@ -11,11 +11,10 @@ Pay Inn Project
 
 1.  **Pull repository.**
 
-2.  **Create .env.development in root directory.**
-
-    Copy and paste this line. It is the staging api endpoint
+2.  **Create .env.development in root directory and copy paste the line below.**
 
     WPGRAPHQL_URL=https://admin.payinn.infusion121.com/graphql
+    
 3.  **Start devloping**
 
     Run this code
