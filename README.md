@@ -11,7 +11,7 @@
 
 1.  **Pull repository.**
 
-2.  **Create .envdevelopment in root directory.**
+2.  **Create .env.development in root directory.**
 
     Copy and paste this line. It is the staging api endpoint
 
