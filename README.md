@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+Pay Inn Project
 </h1>
 
 ## 🚀 Quick start
