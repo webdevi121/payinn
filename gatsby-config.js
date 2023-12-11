@@ -23,7 +23,6 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: "gatsby-plugin-sass",
@@ -89,6 +88,58 @@ module.exports = {
         url: process.env.WPGRAPHQL_URL,
         schema: {
           timeout: 500000,
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+          {
+            allSitePage(filter: {path: { regex: "/^/(?!homepage|404|dev-404-page|404.html)/" }}) {
+              nodes {
+                path
+              }
+            }
+            allWpContentNode {
+              nodes {
+                ... on WpPage {
+                  uri
+                  modifiedGmt(formatString: "YYYY-MM-DD HH:mm Z")
+                }
+              }
+            }
+          }
+        `,
+        output: "/",
+        resolveSiteUrl: ({ site }) => {
+          // Determine the site URL dynamically based on the environment
+          if (process.env.NODE_ENV === "production") {
+            return siteUrl // Production URL
+          } else {
+            return "http://localhost:8000" // Development URL
+          }
+        },
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allWpContentNode: { nodes: allWpNodes },
+        }) => {
+          const wpNodeMap = allWpNodes.reduce((acc, node) => {
+            const { uri } = node
+            acc[uri] = node
+
+            return acc
+          }, {})
+
+          return allPages.map(page => {
+            return { ...page, ...wpNodeMap[page.path] }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
         },
       },
     },
