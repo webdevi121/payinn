@@ -115,7 +115,7 @@ module.exports = {
         resolveSiteUrl: ({ site }) => {
           // Determine the site URL dynamically based on the environment
           if (process.env.NODE_ENV === "production") {
-            return siteUrl // Production URL
+            return "https://payinn.com.au" // Production URL
           } else {
             return "http://localhost:8000" // Development URL
           }
