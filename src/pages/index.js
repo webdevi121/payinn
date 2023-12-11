@@ -5,14 +5,23 @@ import Layout from "components/layout"
 import PageSection from "../components/pageSection"
 
 const Homepage = ({ data }) => {
+  const item = data.wpPage
   return (
     <React.Fragment>
       <Layout>
         <Seo
-          title={data.wpPage.acfSeoData?.seoTitle}
-          description={data.wpPage.acfSeoData?.seoDescription}
-          image={data.wpPage.acfSeoData.socialThumbnail?.sourceUrl}
-          uri={data.wpPage.uri}
+          title={item.seo.title}
+          description={
+            item.seo.metaDesc
+              ? item.seo.metaDesc
+              : item.seo.opengraphDescription
+          }
+          image={item.seo.opengraphImage?.sourceUrl}
+          url={item.seo.opengraphUrl}
+          publishedTime={item.seo.opengraphPublishedTime}
+          publisher={item.seo.opengraphPublisher}
+          modifiedTime={item.seo.opengraphModifiedTime}
+          type={item.seo.opengraphType}
         />
         <PageSection data={data} />
       </Layout>
@@ -26,13 +35,7 @@ export const query = graphql`
   {
     wpPage(slug: { eq: "homepage" }) {
       uri
-      acfSeoData {
-        seoTitle
-        seoDescription
-        socialThumbnail {
-          sourceUrl
-        }
-      }
+      ...SeoPage
       acfPageSections {
         sectionContent {
           ... on WpPage_Acfpagesections_SectionContent_BannerSection {
