@@ -87,6 +87,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: process.env.WPGRAPHQL_URL,
+        schema: {
+          timeout: 500000,
+        },
       },
     },
     {
@@ -94,11 +97,11 @@ module.exports = {
       resolve: "gatsby-plugin-exclude",
       options: { paths: ["/contact-iframe"] },
     },
-    {
-      resolve: "@mkitio/gatsby-theme-password-protect",
-      options: {
-        password: "@dmin121", // delete or `undefined` to disable password protection
-      },
-    },
+    // {
+    //   resolve: "@mkitio/gatsby-theme-password-protect",
+    //   options: {
+    //     password: "@dmin121", // delete or `undefined` to disable password protection
+    //   },
+    // },
   ],
 }
