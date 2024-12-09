@@ -51,7 +51,7 @@ export default function ContactUs({ data }) {
                 saving on Merchant Fees!
               </p>
               <p>
-                <a href="mailto:info@payinn.com.au">info@payinn.com.au</a>
+                <a href="mailto:david@payinn.com.au">david@payinn.com.au</a>
               </p>
             </div>
           </div>
